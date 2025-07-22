@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Offers from "./pages/Offers";
 import CoffeeShop from "./pages/CoffeeShop";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import { CartProvider } from "./contexts/CartContext";
 
