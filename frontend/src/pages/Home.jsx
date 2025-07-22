@@ -190,51 +190,28 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-3 gap-8">
-            <div className="card">
-              <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1531441802565-2948024f1b22?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxsYXR0ZSUyMGFydHxlbnwwfHx8fDE3NTMxNTk2Njh8MA&ixlib=rb-4.1.0&q=85" 
-                  alt="Signature Latte with beautiful latte art"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
+            {featuredItems.map((item) => (
+              <div key={item.id} className="card">
+                <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+                <p className="text-text-secondary mb-4">{item.description}</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-2xl font-bold text-coffee-medium">${item.price.toFixed(2)}</span>
+                  <button 
+                    onClick={() => addToCart(item)}
+                    className="btn btn-primary hover:bg-coffee-dark transition-colors"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Signature Latte</h3>
-              <p className="text-text-secondary mb-4">Our house blend with perfectly steamed milk and latte art</p>
-              <div className="flex justify-between items-center">
-                <span className="text-2xl font-bold text-coffee-medium">$4.75</span>
-                <button className="btn btn-primary">Order Now</button>
-              </div>
-            </div>
-            <div className="card">
-              <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxjb2ZmZWV8ZW58MHx8fHwxNzUzMTU5Njc0fDA&ixlib=rb-4.1.0&q=85" 
-                  alt="Cold Brew Special in glass cup"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Cold Brew Special</h3>
-              <p className="text-text-secondary mb-4">Smooth cold brew with your choice of milk or cream</p>
-              <div className="flex justify-between items-center">
-                <span className="text-2xl font-bold text-coffee-medium">$4.25</span>
-                <button className="btn btn-primary">Order Now</button>
-              </div>
-            </div>
-            <div className="card">
-              <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1596018589878-217d8603c4c6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxsYXR0ZSUyMGFydHxlbnwwfHx8fDE3NTMxNTk2Njh8MA&ixlib=rb-4.1.0&q=85" 
-                  alt="Espresso Perfection - premium espresso shots"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Espresso Perfection</h3>
-              <p className="text-text-secondary mb-4">Rich, bold shots from our premium espresso blend</p>
-              <div className="flex justify-between items-center">
-                <span className="text-2xl font-bold text-coffee-medium">$2.50</span>
-                <button className="btn btn-primary">Order Now</button>
-              </div>
-            </div>
+            ))}
           </div>
           <div className="text-center mt-12">
             <Link to="/coffee-shop" className="btn btn-secondary">
