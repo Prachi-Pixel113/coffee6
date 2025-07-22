@@ -157,9 +157,21 @@ const CoffeeShop = () => {
                 const cartItem = cart.find(cartItem => cartItem.id === item.id);
                 return (
                   <div key={item.id} className="card group">
-                    <div className="w-full h-48 bg-accent-warm rounded-lg mb-4 flex items-center justify-center">
-                      <div className="text-coffee-dark text-4xl font-bold">
-                        {item.name.charAt(0)}
+                    <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+                      <img 
+                        src={item.image} 
+                        alt={item.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        onError={(e) => {
+                          // Fallback to letter placeholder if image fails to load
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
+                      />
+                      <div className="w-full h-full bg-accent-warm rounded-lg flex items-center justify-center" style={{display: 'none'}}>
+                        <div className="text-coffee-dark text-4xl font-bold">
+                          {item.name.charAt(0)}
+                        </div>
                       </div>
                     </div>
                     
