@@ -4,7 +4,7 @@ import { Coffee, Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucid
 const Footer = () => {
   return (
     <>
-      <footer className="text-white" style={{backgroundColor: '#6BB4423'}}>
+      <footer className="text-white" style={{backgroundColor: '#6B4423'}}>
         <div className="container mx-auto px-6 py-20 pt-24">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             
