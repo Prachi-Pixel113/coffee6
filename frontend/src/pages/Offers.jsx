@@ -82,7 +82,7 @@ const Offers = () => {
       </section>
 
       {/* Offers Grid */}
-      <section className="section bg-cream-light">
+      <section className="section bg-white">
         <div className="container">
           {filteredOffers.length === 0 ? (
             <div className="text-center py-12">
