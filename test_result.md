@@ -129,17 +129,17 @@ frontend:
         - agent: "main"
         - comment: "Successfully expanded coffee shop menu from 10 to 20 products across 4 categories: Hot Beverages (6 items), Cold Beverages (5 items), Pastries & Snacks (6 items), and new Specialty Drinks (3 items). Replaced all letter placeholders with high-quality product images. Added new items: Mocha, Macchiato, Frappuccino, Nitro Coffee, Pain au Chocolat, Almond Croissant, Danish Pastry, Chai Latte, Hot Chocolate, Matcha Latte."
 
-  - task: "Fix category button text visibility issue"
+  - task: "Add cart functionality with global cart state and cart buttons"
     implemented: true
     working: true
-    file: "/app/frontend/src/pages/CoffeeShop.jsx"
+    file: "/app/frontend/src/contexts/CartContext.js, /app/frontend/src/components/Header.jsx, /app/frontend/src/pages/Home.jsx, /app/frontend/src/pages/CoffeeShop.jsx, /app/frontend/src/App.js"
     stuck_count: 0
     priority: "high"
     needs_retesting: false
     status_history:
         - working: true
         - agent: "main"
-        - comment: "Fixed category selection visibility issue where white text on white background was invisible. Changed selected category styling from 'bg-coffee-medium text-white' to 'bg-coffee-dark text-white font-semibold' for better contrast and readability. All category buttons now have proper text visibility when selected."
+        - comment: "Successfully implemented comprehensive cart functionality: 1) Created CartContext for global cart state management, 2) Added cart icon with item count in header, 3) Added floating cart button in coffee shop, 4) Converted 'Order Now' buttons to 'Add to Cart' in Featured Favorites, 5) Enabled cart functionality across all product pages. Cart shows item count, total price, and persistent across navigation."
 
 backend:
   - task: "Backend connection and API endpoints"
