@@ -196,6 +196,18 @@ frontend:
         - comment: "Successfully implemented comprehensive cart functionality: 1) Created CartContext for global cart state management, 2) Added cart icon with item count in header, 3) Added floating cart button in coffee shop, 4) Converted 'Order Now' buttons to 'Add to Cart' in Featured Favorites, 5) Enabled cart functionality across all product pages. Cart shows item count, total price, and persistent across navigation."
 
 backend:
+  - task: "Contact Form API endpoint with email notifications"
+    implemented: false
+    working: false
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: false
+        - agent: "main"
+        - comment: "Starting implementation of contact form API endpoint with MongoDB storage and email notification functionality"
+
   - task: "Backend connection and API endpoints"
     implemented: true 
     working: true
