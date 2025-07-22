@@ -287,13 +287,21 @@ p {
   opacity: 1;
 }
 
-/* Enhanced Gradient Text */
+/* Enhanced Gradient Text - Lighter Version */
 .text-gradient-hero {
   background: linear-gradient(135deg, #DAA520 0%, #FFF8DC 50%, #D2B48C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0 4px 8px rgba(218, 165, 32, 0.3);
+}
+
+.text-gradient-hero-light {
+  background: linear-gradient(135deg, #FFD700 0%, #FFFAF0 40%, #F0E68C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(255, 215, 0, 0.4);
 }
 
 /* Coffee Pattern Overlay */
