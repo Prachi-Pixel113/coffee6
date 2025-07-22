@@ -193,25 +193,86 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Enhanced Features Section */}
       <section className="section bg-white">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Brew Haven?</h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              We're passionate about delivering an exceptional coffee experience that goes beyond just great taste.
-            </p>
-          </div>
-          <div className="grid grid-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="card text-center hover-lift">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-accent-warm rounded-full text-coffee-dark mb-6">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-text-secondary">{feature.description}</p>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Side - Content */}
+            <div className="space-y-8">
+              <div className="text-center lg:text-left">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Brew Haven?</h2>
+                <p className="text-lg text-text-secondary max-w-2xl">
+                  We're passionate about delivering an exceptional coffee experience that goes beyond just great taste.
+                </p>
               </div>
-            ))}
+              
+              {/* Feature Points */}
+              <div className="space-y-6">
+                {features.map((feature, index) => (
+                  <div key={index} className="flex items-start space-x-4 group">
+                    <div className="flex-shrink-0 w-14 h-14 bg-accent-warm rounded-full flex items-center justify-center text-coffee-dark group-hover:bg-coffee-medium group-hover:text-white transition-all duration-300">
+                      {feature.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold mb-2 text-coffee-dark">{feature.title}</h3>
+                      <p className="text-text-secondary leading-relaxed">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Additional Benefits */}
+              <div className="bg-cream-dark rounded-2xl p-6 mt-8">
+                <div className="flex items-center space-x-3 mb-4">
+                  <Award className="h-6 w-6 text-accent-gold" />
+                  <h4 className="text-lg font-semibold text-coffee-dark">Our Promise</h4>
+                </div>
+                <ul className="space-y-2 text-text-secondary">
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-accent-gold rounded-full"></div>
+                    <span>Ethically sourced coffee beans from verified farms</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-accent-gold rounded-full"></div>
+                    <span>Freshly roasted in small batches for optimal flavor</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-accent-gold rounded-full"></div>
+                    <span>Expertly trained baristas committed to perfection</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            {/* Right Side - Image */}
+            <div className="relative">
+              <div className="relative z-10">
+                <img 
+                  src="https://images.unsplash.com/photo-1532713107108-dfb5d8d2fc42?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxiYXJpc3RhfGVufDB8fHx8MTc1MzE2NTExNHww&ixlib=rb-4.1.0&q=85"
+                  alt="Professional barista creating latte art - showcasing our commitment to quality and craftsmanship"
+                  className="w-full h-[600px] object-cover rounded-2xl shadow-2xl"
+                />
+                
+                {/* Floating Stats Card */}
+                <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-2xl p-6 border border-gray-100">
+                  <div className="flex items-center space-x-4">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-coffee-medium">10+</div>
+                      <div className="text-sm text-text-secondary">Years Experience</div>
+                    </div>
+                    <div className="w-px h-12 bg-gray-200"></div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-coffee-medium">500+</div>
+                      <div className="text-sm text-text-secondary">Happy Customers</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Decorative Elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent-warm rounded-full opacity-20"></div>
+              <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-coffee-light rounded-full opacity-10"></div>
+            </div>
           </div>
         </div>
       </section>
