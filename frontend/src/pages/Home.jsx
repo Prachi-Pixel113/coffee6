@@ -25,8 +25,13 @@ const Home = () => {
   return (
     <div className="home-page">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-coffee-dark via-coffee-medium to-coffee-light text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+      <section className="relative text-white overflow-hidden" style={{
+        backgroundImage: 'linear-gradient(rgba(62, 39, 35, 0.7), rgba(107, 68, 35, 0.8)), url("https://images.unsplash.com/photo-1675306408031-a9aad9f23308?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8fDE3NTMxNTU5Mjh8MA&ixlib=rb-4.1.0&q=85")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
+        <div className="absolute inset-0 bg-black opacity-10"></div>
         <div className="relative container">
           <div className="section flex items-center min-h-[80vh]">
             <div className="max-w-2xl fade-in-up">
