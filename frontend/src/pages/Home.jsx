@@ -44,6 +44,19 @@ const Home = () => {
             <div className="coffee-stream coffee-stream-1"></div>
             <div className="coffee-stream coffee-stream-2"></div>
             <div className="coffee-stream coffee-stream-3"></div>
+            
+            {/* Coffee Mug Animation */}
+            <div className="coffee-mug-animation">
+              <div className="coffee-mug">
+                <div className="coffee-liquid"></div>
+                <div className="coffee-steam">
+                  <div className="steam-line"></div>
+                  <div className="steam-line"></div>
+                  <div className="steam-line"></div>
+                  <div className="steam-line"></div>
+                </div>
+              </div>
+            </div>
           </div>
           
           {/* Fallback static background */}
