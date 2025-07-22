@@ -446,7 +446,7 @@ p {
   transform: rotate(12deg) scale(1.1);
 }
 
-/* Enhanced Footer Styles */
+/* Enhanced Footer Styles with Modern Effects */
 .footer-separator {
   box-shadow: 0 2px 8px rgba(218, 165, 32, 0.3);
 }
@@ -470,6 +470,121 @@ p {
   100% {
     transform: translate(-60px, -40px);
   }
+}
+
+/* Enhanced Footer Glass Effect */
+.footer-glass-card {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Modern Footer Hover Effects */
+.footer-link-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-link-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(218, 165, 32, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.footer-link-hover:hover::before {
+  left: 100%;
+}
+
+/* Social Media Enhanced Hover Effects */
+.footer-social-glow {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.footer-social-glow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(218, 165, 32, 0.4), transparent 70%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.footer-social-glow:hover::before {
+  width: 150%;
+  height: 150%;
+}
+
+/* Enhanced Contact Card Effects */
+.footer-contact-card {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-contact-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: linear-gradient(45deg, transparent, rgba(218, 165, 32, 0.3), transparent);
+  border-radius: 12px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.footer-contact-card:hover::before {
+  opacity: 1;
+}
+
+/* Floating Animation for Hours */
+@keyframes floatHours {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.footer-hours-item {
+  animation: floatHours 3s ease-in-out infinite;
+}
+
+.footer-hours-item:nth-child(2) {
+  animation-delay: -1s;
+}
+
+.footer-hours-item:nth-child(3) {
+  animation-delay: -2s;
+}
+
+/* Pulse Animation for Status Dots */
+@keyframes statusPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.footer-status-dot {
+  animation: statusPulse 2s ease-in-out infinite;
 }
 
 /* Footer responsive adjustments */
