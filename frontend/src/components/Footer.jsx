@@ -72,35 +72,43 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* Quick Links - Enhanced */}
-              <div className="space-y-6">
-                <h4 className="text-xl font-semibold text-white border-b-2 border-accent-gold pb-2 inline-block">Quick Links</h4>
-                <ul className="space-y-3">
-                  <li>
-                    <a href="/" className="text-cream-medium hover:text-accent-gold transition-all duration-300 text-base flex items-center group">
-                      <span className="w-2 h-2 bg-accent-gold rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/about" className="text-cream-medium hover:text-accent-gold transition-all duration-300 text-base flex items-center group">
-                      <span className="w-2 h-2 bg-accent-gold rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                      About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/offers" className="text-cream-medium hover:text-accent-gold transition-all duration-300 text-base flex items-center group">
-                      <span className="w-2 h-2 bg-accent-gold rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                      Special Offers
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/coffee-shop" className="text-cream-medium hover:text-accent-gold transition-all duration-300 text-base flex items-center group">
-                      <span className="w-2 h-2 bg-accent-gold rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                      Coffee Shop
-                    </a>
-                  </li>
-                </ul>
+              {/* Quick Links - Enhanced with Modern Card Style */}
+              <div className="space-y-8">
+                <div className="relative">
+                  <h4 className="text-xl font-bold text-white mb-1 tracking-tight">Quick Links</h4>
+                  <div className="w-12 h-1 bg-gradient-to-r from-accent-gold to-amber-400 rounded-full"></div>
+                  <p className="text-cream-medium/70 text-sm mt-3">Navigate our offerings</p>
+                </div>
+                <div className="space-y-1">
+                  <a href="/" className="group flex items-center space-x-3 text-cream-medium hover:text-white transition-all duration-300 text-base py-3 px-4 rounded-lg hover:bg-white/5 backdrop-blur-sm">
+                    <div className="w-2 h-2 bg-accent-gold rounded-full opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300"></div>
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">Home</span>
+                    <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="w-1 h-1 bg-accent-gold rounded-full"></div>
+                    </div>
+                  </a>
+                  <a href="/about" className="group flex items-center space-x-3 text-cream-medium hover:text-white transition-all duration-300 text-base py-3 px-4 rounded-lg hover:bg-white/5 backdrop-blur-sm">
+                    <div className="w-2 h-2 bg-accent-gold rounded-full opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300"></div>
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">About Us</span>
+                    <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="w-1 h-1 bg-accent-gold rounded-full"></div>
+                    </div>
+                  </a>
+                  <a href="/offers" className="group flex items-center space-x-3 text-cream-medium hover:text-white transition-all duration-300 text-base py-3 px-4 rounded-lg hover:bg-white/5 backdrop-blur-sm">
+                    <div className="w-2 h-2 bg-accent-gold rounded-full opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300"></div>
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">Special Offers</span>
+                    <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="w-1 h-1 bg-accent-gold rounded-full"></div>
+                    </div>
+                  </a>
+                  <a href="/coffee-shop" className="group flex items-center space-x-3 text-cream-medium hover:text-white transition-all duration-300 text-base py-3 px-4 rounded-lg hover:bg-white/5 backdrop-blur-sm">
+                    <div className="w-2 h-2 bg-accent-gold rounded-full opacity-0 group-hover:opacity-100 transform scale-0 group-hover:scale-100 transition-all duration-300"></div>
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">Coffee Shop</span>
+                    <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="w-1 h-1 bg-accent-gold rounded-full"></div>
+                    </div>
+                  </a>
+                </div>
               </div>
 
               {/* Contact Info - Enhanced */}
