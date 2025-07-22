@@ -210,7 +210,7 @@ const Home = () => {
               <div className="space-y-6">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-start space-x-4 group">
-                    <div className="flex-shrink-0 w-14 h-14 bg-accent-warm rounded-full flex items-center justify-center text-coffee-dark group-hover:bg-coffee-medium group-hover:text-white transition-all duration-300">
+                    <div className="flex-shrink-0 w-14 h-14 bg-accent-warm rounded-full flex items-center justify-center text-coffee-dark transition-all duration-300">
                       {feature.icon}
                     </div>
                     <div className="flex-1">
