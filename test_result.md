@@ -115,7 +115,7 @@ frontend:
     status_history:
         - working: true
         - agent: "main"
-        - comment: "Successfully enhanced hero section with major improvements: 1) Professional image carousel with 3 high-quality coffee backgrounds (auto-advancing every 5s), 2) Enhanced typography with gradient text effects, 3) Removed statistical numbers for cleaner design, 4) Significantly improved CTA buttons with modern styling: rounded corners, enhanced shadows, uppercase text, smooth animations, and professional hover effects, 5) Added floating info card and professional badge, 6) Optimized for mobile with responsive button design, 7) Added subtle animated pattern overlay and carousel navigation dots. The hero section now has exceptional visual impact with clean, professional appearance and superior user experience."
+        - comment: "Successfully enhanced hero section with comprehensive improvements: 1) Professional image carousel with 3 high-quality coffee backgrounds (auto-advancing every 5s), 2) Updated all text content from dark brown to light colors - white, light gray, and bright gradients for optimal readability, 3) Enhanced 'Brew Haven' title with lighter gold gradient (#FFD700 to #F0E68C), 4) Improved CTA buttons with brighter orange/gold gradients and better contrast, 5) Updated badge and floating card with lighter yellow accents, 6) Removed statistical numbers for cleaner design, 7) Enhanced mobile responsiveness with full-width buttons. The hero section now features excellent readability with light content colors against professional coffee backgrounds."
 
   - task: "Replace Coffee icon placeholders with actual product images in Featured Favorites section"
     implemented: true
