@@ -79,28 +79,42 @@ export const menuData = {
           name: "Classic Espresso",
           description: "Rich, bold shot of pure coffee perfection",
           price: 2.50,
-          image: "/api/placeholder/300/200"
+          image: "https://images.unsplash.com/photo-1596018589878-217d8603c4c6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxsYXR0ZSUyMGFydHxlbnwwfHx8fDE3NTMxNTk2Njh8MA&ixlib=rb-4.1.0&q=85"
         },
         {
           id: 2,
           name: "Cappuccino",
           description: "Equal parts espresso, steamed milk, and foam",
           price: 4.25,
-          image: "/api/placeholder/300/200"
+          image: "https://images.unsplash.com/photo-1534778101976-62847782c213?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxjYXBwdWNjaW5vfGVufDB8fHx8MTc1MzE2MDUxOXww&ixlib=rb-4.1.0&q=85"
         },
         {
           id: 3,
           name: "Caffe Latte",
           description: "Smooth espresso with steamed milk and light foam",
           price: 4.75,
-          image: "/api/placeholder/300/200"
+          image: "https://images.unsplash.com/photo-1531441802565-2948024f1b22?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxsYXR0ZSUyMGFydHxlbnwwfHx8fDE3NTMxNTk2Njh8MA&ixlib=rb-4.1.0&q=85"
         },
         {
           id: 4,
           name: "Americano",
           description: "Espresso shots with hot water for a clean taste",
           price: 3.50,
-          image: "/api/placeholder/300/200"
+          image: "https://images.unsplash.com/photo-1473923377535-0002805f57e8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxjYXBwdWNjaW5vfGVufDB8fHx8MTc1MzE2MDUxOXww&ixlib=rb-4.1.0&q=85"
+        },
+        {
+          id: 11,
+          name: "Mocha",
+          description: "Rich espresso with steamed milk and chocolate syrup",
+          price: 5.25,
+          image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxjYXBwdWNjaW5vfGVufDB8fHx8MTc1MzE2MDUxOXww&ixlib=rb-4.1.0&q=85"
+        },
+        {
+          id: 12,
+          name: "Macchiato",
+          description: "Espresso marked with a dollop of steamed milk foam",
+          price: 4.50,
+          image: "https://images.unsplash.com/photo-1531441802565-2948024f1b22?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxsYXR0ZSUyMGFydHxlbnwwfHx8fDE3NTMxNTk2Njh8MA&ixlib=rb-4.1.0&q=85"
         }
       ]
     },
@@ -113,21 +127,35 @@ export const menuData = {
           name: "Iced Coffee",
           description: "Refreshing cold brew served over ice",
           price: 3.75,
-          image: "/api/placeholder/300/200"
+          image: "https://images.unsplash.com/photo-1534414671319-4fc58cc112e1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwzfHxjb2ZmZWUlMjBkcmlua3N8ZW58MHx8fHwxNzUzMTYwNTExfDA&ixlib=rb-4.1.0&q=85"
         },
         {
           id: 6,
           name: "Cold Brew",
           description: "Smooth, slow-steeped coffee concentrate",
           price: 4.25,
-          image: "/api/placeholder/300/200"
+          image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxjb2ZmZWV8ZW58MHx8fHwxNzUzMTU5Njc0fDA&ixlib=rb-4.1.0&q=85"
         },
         {
           id: 7,
           name: "Iced Latte",
           description: "Espresso with cold milk over ice",
           price: 4.75,
-          image: "/api/placeholder/300/200"
+          image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBkcmlua3N8ZW58MHx8fHwxNzUzMTYwNTExfDA&ixlib=rb-4.1.0&q=85"
+        },
+        {
+          id: 13,
+          name: "Frappuccino",
+          description: "Blended iced coffee with milk and ice",
+          price: 5.50,
+          image: "https://images.unsplash.com/photo-1534414671319-4fc58cc112e1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwzfHxjb2ZmZWUlMjBkcmlua3N8ZW58MHx8fHwxNzUzMTYwNTExfDA&ixlib=rb-4.1.0&q=85"
+        },
+        {
+          id: 14,
+          name: "Nitro Coffee",
+          description: "Cold brew infused with nitrogen for a creamy texture",
+          price: 4.95,
+          image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBkcmlua3N8ZW58MHx8fHwxNzUzMTYwNTExfDA&ixlib=rb-4.1.0&q=85"
         }
       ]
     },
@@ -140,21 +168,69 @@ export const menuData = {
           name: "Croissant",
           description: "Buttery, flaky French pastry",
           price: 3.25,
-          image: "/api/placeholder/300/200"
+          image: "https://images.unsplash.com/photo-1691480162735-9b91238080f6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxjcm9pc3NhbnR8ZW58MHx8fHwxNzUzMTYwNTUxfDA&ixlib=rb-4.1.0&q=85"
         },
         {
           id: 9,
           name: "Blueberry Muffin",
           description: "Fresh baked with wild blueberries",
           price: 2.95,
-          image: "/api/placeholder/300/200"
+          image: "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxtdWZmaW58ZW58MHx8fHwxNzUzMTYwNTU5fDA&ixlib=rb-4.1.0&q=85"
         },
         {
           id: 10,
           name: "Chocolate Chip Cookie",
           description: "Homemade with premium chocolate chips",
           price: 2.50,
-          image: "/api/placeholder/300/200"
+          image: "https://images.unsplash.com/photo-1578632398050-cccbc1461ab9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwyfHxtdWZmaW58ZW58MHx8fHwxNzUzMTYwNTU5fDA&ixlib=rb-4.1.0&q=85"
+        },
+        {
+          id: 15,
+          name: "Pain au Chocolat",
+          description: "Classic French pastry with rich chocolate filling",
+          price: 3.75,
+          image: "https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxwYXN0cnl8ZW58MHx8fHwxNzUzMTYwNTcwfDA&ixlib=rb-4.1.0&q=85"
+        },
+        {
+          id: 16,
+          name: "Almond Croissant",
+          description: "Buttery croissant filled with sweet almond cream",
+          price: 4.25,
+          image: "https://images.unsplash.com/photo-1623334044303-241021148842?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxjcm9pc3NhbnR8ZW58MHx8fHwxNzUzMTYwNTUxfDA&ixlib=rb-4.1.0&q=85"
+        },
+        {
+          id: 17,
+          name: "Danish Pastry",
+          description: "Flaky pastry with your choice of fruit or cream filling",
+          price: 3.50,
+          image: "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxtdWZmaW58ZW58MHx8fHwxNzUzMTYwNTU5fDA&ixlib=rb-4.1.0&q=85"
+        }
+      ]
+    },
+    {
+      id: 4,
+      name: "Specialty Drinks",
+      items: [
+        {
+          id: 18,
+          name: "Chai Latte",
+          description: "Spiced tea blend with steamed milk and honey",
+          price: 4.50,
+          image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxjYXBwdWNjaW5vfGVufDB8fHx8MTc1MzE2MDUxOXww&ixlib=rb-4.1.0&q=85"
+        },
+        {
+          id: 19,
+          name: "Hot Chocolate",
+          description: "Rich, creamy chocolate with whipped cream",
+          price: 3.75,
+          image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxjYXBwdWNjaW5vfGVufDB8fHx8MTc1MzE2MDUxOXww&ixlib=rb-4.1.0&q=85"
+        },
+        {
+          id: 20,
+          name: "Matcha Latte",
+          description: "Premium Japanese green tea with steamed milk",
+          price: 5.25,
+          image: "https://images.unsplash.com/photo-1534778101976-62847782c213?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxjYXBwdWNjaW5vfGVufDB8fHx8MTc1MzE2MDUxOXww&ixlib=rb-4.1.0&q=85"
         }
       ]
     }
