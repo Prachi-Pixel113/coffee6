@@ -61,9 +61,12 @@ const Home = () => {
           
           {/* Fallback static background */}
           <div 
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center fallback-bg"
             style={{
-              backgroundImage: 'url("https://images.unsplash.com/photo-1516036018940-b0159d2ab461?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBwb3VyaW5nfGVufDB8fHx8MTc1MzE1NjQ0Mnww&ixlib=rb-4.1.0&q=85")'
+              backgroundImage: 'url("https://images.unsplash.com/photo-1516036018940-b0159d2ab461?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBwb3VyaW5nfGVufDB8fHx8MTc1MzE1NjQ0Mnww&ixlib=rb-4.1.0&q=85")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center center',
+              backgroundRepeat: 'no-repeat'
             }}
           ></div>
         </div>
