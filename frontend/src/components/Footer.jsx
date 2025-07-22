@@ -182,21 +182,56 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* Hours - Enhanced */}
-              <div className="space-y-6">
-                <h4 className="text-xl font-semibold text-white border-b-2 border-accent-gold pb-2 inline-block">Opening Hours</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center py-2 border-b border-coffee-medium">
-                    <span className="text-cream-medium">Monday - Friday</span>
-                    <span className="text-accent-gold font-semibold">6:00 AM - 8:00 PM</span>
+              {/* Hours - Enhanced with Modern Schedule Design */}
+              <div className="space-y-8">
+                <div className="relative">
+                  <h4 className="text-xl font-bold text-white mb-1 tracking-tight">Opening Hours</h4>
+                  <div className="w-12 h-1 bg-gradient-to-r from-accent-gold to-amber-400 rounded-full"></div>
+                  <p className="text-cream-medium/70 text-sm mt-3">Visit us anytime</p>
+                </div>
+                <div className="space-y-1">
+                  <div className="group relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    <div className="relative flex justify-between items-center py-4 px-4 rounded-lg transition-all duration-300">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <span className="text-cream-medium font-medium">Monday - Friday</span>
+                      </div>
+                      <span className="text-accent-gold font-bold text-right">6:00 AM - 8:00 PM</span>
+                    </div>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-coffee-medium">
-                    <span className="text-cream-medium">Saturday</span>
-                    <span className="text-accent-gold font-semibold">7:00 AM - 9:00 PM</span>
+                  <div className="group relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    <div className="relative flex justify-between items-center py-4 px-4 rounded-lg transition-all duration-300">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                        <span className="text-cream-medium font-medium">Saturday</span>
+                      </div>
+                      <span className="text-accent-gold font-bold text-right">7:00 AM - 9:00 PM</span>
+                    </div>
                   </div>
-                  <div className="flex justify-between items-center py-2">
-                    <span className="text-cream-medium">Sunday</span>
-                    <span className="text-accent-gold font-semibold">8:00 AM - 6:00 PM</span>
+                  <div className="group relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    <div className="relative flex justify-between items-center py-4 px-4 rounded-lg transition-all duration-300">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                        <span className="text-cream-medium font-medium">Sunday</span>
+                      </div>
+                      <span className="text-accent-gold font-bold text-right">8:00 AM - 6:00 PM</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Special Notice */}
+                <div className="relative">
+                  <div className="bg-gradient-to-r from-amber-500/10 to-accent-gold/10 border border-accent-gold/20 rounded-xl p-4 backdrop-blur-sm">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <Heart className="h-4 w-4 text-accent-gold" />
+                      <span className="text-xs font-semibold text-accent-gold uppercase tracking-wide">Special Notice</span>
+                    </div>
+                    <p className="text-cream-medium/80 text-sm leading-relaxed">
+                      Early bird special: Free pastry with any coffee ordered before 8 AM!
+                    </p>
                   </div>
                 </div>
               </div>
