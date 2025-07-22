@@ -1,5 +1,5 @@
 import React from 'react';
-import { Coffee, Heart, Leaf, Award } from 'lucide-react';
+import { Coffee, Heart, Leaf, Award, Users } from 'lucide-react';
 import { aboutData } from '../mock';
 
 const About = () => {
