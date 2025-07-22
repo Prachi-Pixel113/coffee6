@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Coffee, Users, Award } from 'lucide-react';
 import { heroData, testimonialsData } from '../mock';
@@ -6,6 +6,51 @@ import { useCart } from '../contexts/CartContext';
 
 const Home = () => {
   const { addToCart } = useCart();
+  
+  // Hero carousel functionality
+  useEffect(() => {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let currentSlide = 0;
+
+    const showSlide = (index) => {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      if (slides[index]) slides[index].classList.add('active');
+      if (dots[index]) dots[index].classList.add('active');
+    };
+
+    const nextSlide = () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    };
+
+    // Auto-advance slides every 5 seconds
+    const slideInterval = setInterval(nextSlide, 5000);
+
+    // Add click handlers for dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+        // Reset interval
+        clearInterval(slideInterval);
+        setTimeout(() => {
+          const newInterval = setInterval(nextSlide, 5000);
+          return () => clearInterval(newInterval);
+        }, 5000);
+      });
+    });
+
+    // Cleanup
+    return () => {
+      clearInterval(slideInterval);
+      dots.forEach(dot => {
+        dot.replaceWith(dot.cloneNode(true));
+      });
+    };
+  }, []);
   
   // Featured favorites data with matching IDs from menuData
   const featuredItems = [
