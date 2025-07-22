@@ -460,12 +460,6 @@ p {
     font-size: 3.5rem;
   }
   
-  .btn-accent-large,
-  .btn-secondary-large {
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-  
   .floating-card {
     display: none;
   }
@@ -486,13 +480,6 @@ p {
   
   .hero-enhanced .text-7xl {
     font-size: 2.5rem;
-  }
-  
-  .btn-accent-large,
-  .btn-secondary-large {
-    width: 100%;
-    padding: 10px 20px;
-    font-size: 13px;
   }
 }
 
