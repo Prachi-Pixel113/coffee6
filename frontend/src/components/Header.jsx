@@ -108,6 +108,33 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
+              
+              {/* Mobile Cart Section */}
+              <div className="px-4 pt-2 border-t border-gray-100 mt-4">
+                {getCartItemCount() > 0 ? (
+                  <Link
+                    to="/coffee-shop"
+                    className="flex items-center justify-between w-full p-3 bg-coffee-light text-coffee-dark rounded-lg hover:bg-coffee-medium hover:text-white transition-all duration-300"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <div className="flex items-center space-x-2">
+                      <ShoppingCart className="h-5 w-5" />
+                      <span className="font-semibold">Cart ({getCartItemCount()} items)</span>
+                    </div>
+                    <span className="font-bold">${getCartTotal().toFixed(2)}</span>
+                  </Link>
+                ) : (
+                  <Link
+                    to="/coffee-shop"
+                    className="flex items-center space-x-2 w-full p-3 text-gray-400 border border-gray-200 rounded-lg hover:border-coffee-light hover:text-coffee-medium transition-all duration-300"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <ShoppingCart className="h-5 w-5" />
+                    <span>Cart (Empty)</span>
+                  </Link>
+                )}
+              </div>
+
               <div className="px-4 pt-2">
                 <Link
                   to="/contact"
