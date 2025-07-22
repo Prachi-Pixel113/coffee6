@@ -64,18 +64,19 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Buttons */
+/* Buttons - Mobile First Design */
 .btn {
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
   cursor: pointer;
   border: none;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 .btn-primary {
@@ -92,7 +93,7 @@ p {
 .btn-secondary {
   background: transparent;
   color: var(--coffee-medium);
-  border: 2px solid var(--coffee-medium);
+  border: 1.5px solid var(--coffee-medium);
 }
 
 .btn-secondary:hover {
@@ -110,21 +111,47 @@ p {
   transform: translateY(-2px);
 }
 
-/* Hero section specific button styles */
+/* Hero section specific button styles - Mobile First */
 .hero-animated .btn {
-  font-size: 14px;
-  padding: 10px 20px;
+  font-size: 12px;
+  padding: 8px 14px;
+  min-width: auto;
 }
 
 .hero-animated .btn-secondary {
   color: white;
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
 }
 
 .hero-animated .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.2);
   border-color: white;
   color: white;
+}
+
+/* Desktop button adjustments */
+@media (min-width: 768px) {
+  .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+  
+  .hero-animated .btn {
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  .hero-animated .btn {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
 }
 
 /* Container */
