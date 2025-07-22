@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "improve footer section"
+user_problem_statement: "improve contact us functionality"
 
 frontend:
   - task: "Simplified Footer Section with Minimal Clean Design"
