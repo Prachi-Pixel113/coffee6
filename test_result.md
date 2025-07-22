@@ -129,6 +129,18 @@ frontend:
         - agent: "main"
         - comment: "Successfully expanded coffee shop menu from 10 to 20 products across 4 categories: Hot Beverages (6 items), Cold Beverages (5 items), Pastries & Snacks (6 items), and new Specialty Drinks (3 items). Replaced all letter placeholders with high-quality product images. Added new items: Mocha, Macchiato, Frappuccino, Nitro Coffee, Pain au Chocolat, Almond Croissant, Danish Pastry, Chai Latte, Hot Chocolate, Matcha Latte."
 
+  - task: "Fix category button text visibility issue"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/CoffeeShop.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+        - agent: "main"
+        - comment: "Fixed category selection visibility issue where white text on white background was invisible. Changed selected category styling from 'bg-coffee-medium text-white' to 'bg-coffee-dark text-white font-semibold' for better contrast and readability. All category buttons now have proper text visibility when selected."
+
 backend:
   - task: "Backend connection and API endpoints"
     implemented: true 
