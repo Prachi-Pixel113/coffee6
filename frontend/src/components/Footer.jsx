@@ -238,25 +238,41 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Bottom Footer - Enhanced */}
-          <div className="border-t-2 border-coffee-light py-8">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-              <div className="flex items-center space-x-3">
-                <Coffee className="h-5 w-5 text-accent-gold" />
-                <p className="text-cream-light text-base">
-                  © 2024 Brew Haven. All rights reserved.
-                </p>
-              </div>
-              <div className="flex space-x-8">
-                <a href="#" className="text-cream-medium hover:text-accent-gold transition-colors text-base border-b border-transparent hover:border-accent-gold pb-1">
-                  Privacy Policy
-                </a>
-                <a href="#" className="text-cream-medium hover:text-accent-gold transition-colors text-base border-b border-transparent hover:border-accent-gold pb-1">
-                  Terms of Service
-                </a>
-                <a href="#" className="text-cream-medium hover:text-accent-gold transition-colors text-base border-b border-transparent hover:border-accent-gold pb-1">
-                  Cookie Policy
-                </a>
+          {/* Bottom Footer - Enhanced with Modern Glass Effect */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 backdrop-blur-sm"></div>
+            <div className="relative border-t border-white/20 py-10">
+              <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
+                <div className="flex items-center space-x-4">
+                  <div className="relative group">
+                    <div className="w-8 h-8 bg-gradient-to-br from-accent-gold to-amber-400 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                      <Coffee className="h-4 w-4 text-coffee-dark" />
+                    </div>
+                    <div className="absolute -inset-1 bg-gradient-to-br from-accent-gold/50 to-amber-400/50 rounded-lg blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div>
+                    <p className="text-cream-light text-base font-medium">
+                      © 2024 Brew Haven. All rights reserved.
+                    </p>
+                    <p className="text-cream-medium/70 text-sm">
+                      Crafted with <Heart className="inline h-3 w-3 text-red-400 mx-1" /> for coffee lovers
+                    </p>
+                  </div>
+                </div>
+                <div className="flex flex-wrap justify-center lg:justify-end gap-6">
+                  <a href="#" className="group relative text-cream-medium hover:text-white transition-all duration-300 text-sm font-medium">
+                    <span className="relative z-10">Privacy Policy</span>
+                    <div className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-accent-gold to-amber-400 group-hover:w-full transition-all duration-300"></div>
+                  </a>
+                  <a href="#" className="group relative text-cream-medium hover:text-white transition-all duration-300 text-sm font-medium">
+                    <span className="relative z-10">Terms of Service</span>
+                    <div className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-accent-gold to-amber-400 group-hover:w-full transition-all duration-300"></div>
+                  </a>
+                  <a href="#" className="group relative text-cream-medium hover:text-white transition-all duration-300 text-sm font-medium">
+                    <span className="relative z-10">Cookie Policy</span>
+                    <div className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-accent-gold to-amber-400 group-hover:w-full transition-all duration-300"></div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
