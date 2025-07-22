@@ -576,32 +576,60 @@ class BackendTester:
     
     def run_all_tests(self):
         """Run all backend tests"""
-        print("=" * 60)
-        print("BACKEND API TESTING SUITE")
-        print("=" * 60)
+        print("=" * 80)
+        print("COMPREHENSIVE BACKEND API TESTING SUITE")
+        print("=" * 80)
         print(f"Target URL: {API_BASE_URL}")
         print(f"Test started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        print("-" * 60)
+        print("-" * 80)
         
         # Core functionality tests
+        print("\n🔍 CORE API FUNCTIONALITY TESTS")
+        print("-" * 40)
         self.test_health_check()
         self.test_create_status_check()
         self.test_get_status_checks()
         
+        # Contact Form API Tests
+        print("\n📧 CONTACT FORM API TESTS")
+        print("-" * 40)
+        self.test_contact_form_valid_submission()
+        self.test_contact_form_with_phone()
+        self.test_get_contact_submissions()
+        
+        # Validation Tests
+        print("\n✅ VALIDATION TESTS")
+        print("-" * 40)
+        self.test_contact_form_missing_required_fields()
+        self.test_contact_form_invalid_email()
+        self.test_contact_form_message_length_validation()
+        self.test_contact_form_special_characters()
+        
         # Error handling tests
+        print("\n⚠️  ERROR HANDLING TESTS")
+        print("-" * 40)
         self.test_invalid_endpoints()
         self.test_invalid_post_data()
         
+        # Integration Tests
+        print("\n🔗 INTEGRATION TESTS")
+        print("-" * 40)
+        self.test_concurrent_contact_submissions()
+        
         # Configuration tests
+        print("\n⚙️  CONFIGURATION TESTS")
+        print("-" * 40)
         self.test_cors_headers()
         
         # Performance tests
+        print("\n🚀 PERFORMANCE TESTS")
+        print("-" * 40)
         self.test_performance()
         
         # Summary
-        print("-" * 60)
+        print("-" * 80)
         print("TEST SUMMARY")
-        print("-" * 60)
+        print("-" * 80)
         print(f"Total Tests: {self.total_tests}")
         print(f"Passed: {self.passed_tests}")
         print(f"Failed: {self.failed_tests}")
@@ -613,7 +641,7 @@ class BackendTester:
                 if "❌" in result['status']:
                     print(f"  - {result['test']}: {result['message']}")
         
-        print("=" * 60)
+        print("=" * 80)
         
         return self.failed_tests == 0
 
