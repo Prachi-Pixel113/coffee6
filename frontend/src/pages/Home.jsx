@@ -69,7 +69,7 @@ const Home = () => {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-coffee-dark via-coffee-medium to-coffee-light opacity-80"></div>
         <div className="relative container">
-          <div className="section flex items-center min-h-[80vh]">
+          <div className="section flex items-center min-h-[90vh] lg:min-h-screen">
             <div className="max-w-2xl fade-in-up">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 {heroData.title}
@@ -80,12 +80,12 @@ const Home = () => {
               <p className="text-lg mb-8 text-cream-light leading-relaxed">
                 {heroData.description}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/coffee-shop" className="btn btn-accent inline-flex items-center justify-center group">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link to="/coffee-shop" className="btn btn-accent inline-flex items-center justify-center group text-sm px-5 py-3">
                   {heroData.cta}
-                  <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link to="/about" className="btn btn-secondary">
+                <Link to="/about" className="btn btn-secondary text-sm px-5 py-3">
                   Learn Our Story
                 </Link>
               </div>
