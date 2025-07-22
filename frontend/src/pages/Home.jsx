@@ -51,108 +51,108 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      {/* Hero Section */}
-      <section className="relative text-white overflow-hidden hero-animated">
-        {/* Animated Coffee Background */}
-        <div className="absolute inset-0">
-          {/* Option 1: Video Background (when you have the video file) */}
-          {/* <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src="/path-to-your-coffee-video.mp4" type="video/mp4" />
-          </video> */}
-          
-          {/* Option 2: 3D Coffee Animation */}
-          <div className="coffee-3d-scene">
-            <div className="coffee-3d-container">
-              {/* 3D Coffee Mug */}
-              <div className="mug-3d">
-                <div className="mug-body">
-                  <div className="mug-inner"></div>
-                  <div className="mug-coffee">
-                    <div className="coffee-surface"></div>
-                  </div>
-                </div>
-                <div className="mug-handle"></div>
-                <div className="mug-shadow"></div>
-              </div>
-              
-              {/* 3D Human Hand Animation */}
-              <div className="hand-3d">
-                <div className="hand-arm"></div>
-                <div className="hand-palm">
-                  <div className="coffee-pot">
-                    <div className="pot-body"></div>
-                    <div className="pot-spout"></div>
-                    <div className="pot-handle"></div>
-                  </div>
-                </div>
-                <div className="fingers">
-                  <div className="finger finger-1"></div>
-                  <div className="finger finger-2"></div>
-                  <div className="finger finger-3"></div>
-                  <div className="finger finger-4"></div>
-                  <div className="thumb"></div>
-                </div>
-              </div>
-              
-              {/* 3D Coffee Stream */}
-              <div className="coffee-stream-3d">
-                <div className="stream-particle stream-1"></div>
-                <div className="stream-particle stream-2"></div>
-                <div className="stream-particle stream-3"></div>
-                <div className="stream-particle stream-4"></div>
-                <div className="stream-particle stream-5"></div>
-              </div>
-              
-              {/* 3D Steam Effect */}
-              <div className="steam-3d">
-                <div className="steam-particle steam-p1"></div>
-                <div className="steam-particle steam-p2"></div>
-                <div className="steam-particle steam-p3"></div>
-                <div className="steam-particle steam-p4"></div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Fallback static background */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center fallback-bg"
-            style={{
-              backgroundImage: 'url("https://images.unsplash.com/photo-1516036018940-b0159d2ab461?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBwb3VyaW5nfGVufDB8fHx8MTc1MzE1NjQ0Mnww&ixlib=rb-4.1.0&q=85")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center center',
-              backgroundRepeat: 'no-repeat'
-            }}
-          ></div>
+      {/* Hero Section - Enhanced Visual Design */}
+      <section className="relative text-white overflow-hidden hero-enhanced min-h-screen">
+        {/* Professional Hero Image Carousel */}
+        <div className="hero-carousel">
+          <div className="hero-slide active" style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1521017432531-fbd92d768814?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBzaG9wJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzUzMTYzODg4fDA&ixlib=rb-4.1.0&q=85")'
+          }}></div>
+          <div className="hero-slide" style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1562235681-74f0c27da49f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxiYXJpc3RhJTIwcG91cmluZyUyMGNvZmZlZXxlbnwwfHx8fDE3NTMxNjM4OTZ8MA&ixlib=rb-4.1.0&q=85")'
+          }}></div>
+          <div className="hero-slide" style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1675306408031-a9aad9f23308?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8fDE3NTMxNjM5MDZ8MA&ixlib=rb-4.1.0&q=85")'
+          }}></div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-coffee-dark via-coffee-medium to-coffee-light opacity-80"></div>
-        <div className="relative container">
-          <div className="section flex items-center min-h-[90vh] lg:min-h-screen">
-            <div className="max-w-2xl fade-in-up">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-                {heroData.title}
-              </h1>
-              <p className="text-xl md:text-2xl mb-6 text-cream-medium font-medium">
-                {heroData.subtitle}
-              </p>
-              <p className="text-lg mb-8 text-cream-light leading-relaxed">
-                {heroData.description}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <Link to="/coffee-shop" className="btn btn-accent inline-flex items-center justify-center group">
-                  {heroData.cta}
-                  <ArrowRight className="ml-1 h-3 w-3 transform group-hover:translate-x-1 transition-transform" />
+
+        {/* Enhanced Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-coffee-dark/60 to-coffee-medium/40"></div>
+        
+        {/* Subtle Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="coffee-pattern"></div>
+        </div>
+
+        {/* Main Hero Content */}
+        <div className="relative container h-full">
+          <div className="flex items-center justify-between min-h-screen py-20">
+            {/* Left Content */}
+            <div className="max-w-3xl space-y-8 fade-in-up">
+              {/* Badge */}
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent-gold/20 backdrop-blur-sm border border-accent-gold/30">
+                <Award className="h-4 w-4 text-accent-gold mr-2" />
+                <span className="text-accent-gold text-sm font-medium">Premium Coffee Experience</span>
+              </div>
+              
+              {/* Enhanced Typography */}
+              <div className="space-y-6">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
+                  <span className="block text-4xl md:text-5xl lg:text-6xl text-accent-gold font-semibold mb-2">Welcome to</span>
+                  <span className="text-gradient-hero">Brew Haven</span>
+                </h1>
+                
+                <p className="text-2xl md:text-3xl text-cream-light font-light leading-relaxed">
+                  Where Every Cup Tells a Story
+                </p>
+                
+                <p className="text-lg md:text-xl text-cream-medium/90 leading-relaxed max-w-2xl">
+                  Discover the perfect blend of premium coffee beans, artisanal brewing methods, and cozy atmosphere. Your journey to coffee perfection starts here.
+                </p>
+              </div>
+
+              {/* Enhanced CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Link to="/coffee-shop" className="btn btn-accent-large inline-flex items-center justify-center group px-8 py-4">
+                  <Coffee className="mr-2 h-5 w-5" />
+                  Explore Our Menu
+                  <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-2 transition-transform" />
                 </Link>
-                <Link to="/about" className="btn btn-secondary">
+                <Link to="/about" className="btn btn-secondary-large px-8 py-4">
                   Learn Our Story
                 </Link>
               </div>
+
+              {/* Visual Stats */}
+              <div className="flex gap-8 pt-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-accent-gold">15+</div>
+                  <div className="text-sm text-cream-medium">Coffee Origins</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-accent-gold">20+</div>
+                  <div className="text-sm text-cream-medium">Signature Drinks</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-accent-gold">5★</div>
+                  <div className="text-sm text-cream-medium">Customer Rating</div>
+                </div>
+              </div>
             </div>
+
+            {/* Right Visual Elements */}
+            <div className="hidden lg:block absolute right-20 top-1/2 transform -translate-y-1/2">
+              <div className="floating-card bg-white/10 backdrop-blur-lg p-6 rounded-2xl border border-white/20">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center">
+                    <Coffee className="h-6 w-6 text-coffee-dark" />
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Fresh Roasted Daily</div>
+                    <div className="text-cream-light text-sm">Premium Quality Guaranteed</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Carousel Navigation */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="flex space-x-2">
+            <button className="carousel-dot active" data-slide="0"></button>
+            <button className="carousel-dot" data-slide="1"></button>
+            <button className="carousel-dot" data-slide="2"></button>
           </div>
         </div>
       </section>
