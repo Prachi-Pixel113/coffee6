@@ -89,7 +89,7 @@ const CoffeeShop = () => {
                     onClick={() => setSelectedCategory(category.id)}
                     className={`w-full text-left px-3 py-2 rounded-lg transition-colors ${
                       selectedCategory === category.id
-                        ? 'bg-coffee-medium text-white'
+                        ? 'bg-coffee-dark text-white font-semibold'
                         : 'text-text-secondary hover:bg-gray-100'
                     }`}
                   >
