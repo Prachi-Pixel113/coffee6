@@ -177,7 +177,8 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Enhanced hero section visual design and functionality"
+    - "Enhanced hero section with light colors and professional design"
+    - "Improved Why Choose Brew Haven section with split layout and professional image"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
