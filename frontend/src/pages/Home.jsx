@@ -59,7 +59,7 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="section bg-cream-light">
+      <section className="section bg-white">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Brew Haven?</h2>
