@@ -42,6 +42,21 @@ const Header = () => {
                 {item.label}
               </Link>
             ))}
+            
+            {/* Cart Button */}
+            {getCartItemCount() > 0 && (
+              <Link 
+                to="/coffee-shop" 
+                className="relative flex items-center space-x-2 text-coffee-dark hover:text-coffee-medium transition-colors"
+              >
+                <ShoppingCart className="h-5 w-5" />
+                <span className="text-sm font-medium">{getCartItemCount()}</span>
+                <span className="absolute -top-2 -right-2 bg-coffee-medium text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  {getCartItemCount()}
+                </span>
+              </Link>
+            )}
+            
             <Link to="/contact" className="btn btn-primary text-sm">
               Contact Us
             </Link>
