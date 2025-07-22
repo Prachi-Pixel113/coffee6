@@ -204,6 +204,25 @@ p {
   overflow: hidden;
 }
 
+/* Desktop specific background positioning */
+@media (min-width: 1024px) {
+  .coffee-animation-bg {
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  .coffee-animation-bg .coffee-stream {
+    transform: scale(1.2);
+  }
+  
+  /* Better positioning for desktop */
+  .fallback-bg {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: fixed;
+  }
+}
+
 .coffee-stream {
   position: absolute;
   width: 200px;
