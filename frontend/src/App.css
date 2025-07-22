@@ -111,22 +111,63 @@ p {
   transform: translateY(-2px);
 }
 
-/* Hero section specific button styles - Mobile First */
+/* Hero section specific button styles - Ultra Mobile First */
 .hero-animated .btn {
-  font-size: 12px;
-  padding: 8px 14px;
+  font-size: 11px;
+  padding: 6px 12px;
   min-width: auto;
+  font-weight: 500;
 }
 
 .hero-animated .btn-secondary {
   color: white;
-  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .hero-animated .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.2);
   border-color: white;
   color: white;
+}
+
+.hero-animated .btn-accent {
+  font-size: 11px;
+  padding: 6px 12px;
+}
+
+/* Extra small mobile adjustments */
+@media (max-width: 360px) {
+  .hero-animated .btn {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+  
+  .hero-animated .btn-accent .ml-1 {
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+  }
+}
+
+/* Small mobile adjustments */
+@media (min-width: 361px) and (max-width: 480px) {
+  .hero-animated .btn {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  
+  .hero-animated .btn-accent .ml-1 {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Medium mobile to tablet */
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero-animated .btn {
+    font-size: 12px;
+    padding: 7px 14px;
+  }
 }
 
 /* Desktop button adjustments */
@@ -137,8 +178,8 @@ p {
   }
   
   .hero-animated .btn {
-    font-size: 13px;
-    padding: 9px 16px;
+    font-size: 12px;
+    padding: 8px 16px;
   }
 }
 
@@ -149,8 +190,8 @@ p {
   }
   
   .hero-animated .btn {
-    font-size: 14px;
-    padding: 10px 18px;
+    font-size: 13px;
+    padding: 9px 18px;
   }
 }
 
