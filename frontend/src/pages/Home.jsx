@@ -134,7 +134,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="section bg-cream-medium">
+      <section className="section bg-cream-dark">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Customers Say</h2>
