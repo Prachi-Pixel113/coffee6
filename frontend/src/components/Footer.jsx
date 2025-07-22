@@ -88,7 +88,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom Section */}
-          <div className="border-t border-white/20 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+          <div className="border-t border-white/20 mt-12 pt-10 flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/80 text-sm">
               © 2024 Brew Haven. All rights reserved.
             </p>
