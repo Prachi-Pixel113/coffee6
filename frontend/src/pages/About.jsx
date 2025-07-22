@@ -48,20 +48,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="section bg-white">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-coffee-medium rounded-full text-white mb-8">
-              <Heart className="h-10 w-10" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Mission</h2>
-            <p className="text-lg text-text-secondary leading-relaxed">
-              {aboutData.mission}
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Values Section */}
       <section className="section bg-white">
