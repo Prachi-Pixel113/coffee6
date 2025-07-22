@@ -28,38 +28,56 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-coffee-medium ${
-                  isActive(item.path)
-                    ? 'text-coffee-medium border-b-2 border-coffee-medium pb-1'
-                    : 'text-gray-600'
-                }`}
-              >
-                {item.label}
+          <div className="hidden md:flex items-center justify-between flex-1">
+            {/* Main Navigation */}
+            <div className="flex items-center space-x-8 ml-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`text-sm font-medium transition-colors hover:text-coffee-medium ${
+                    isActive(item.path)
+                      ? 'text-coffee-medium border-b-2 border-coffee-medium pb-1'
+                      : 'text-gray-600'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+
+            {/* Right Side - Cart & Contact */}
+            <div className="flex items-center space-x-4">
+              {/* Cart Section */}
+              <div className="flex items-center">
+                {getCartItemCount() > 0 ? (
+                  <Link 
+                    to="/coffee-shop" 
+                    className="relative flex items-center space-x-2 bg-coffee-light text-coffee-dark px-4 py-2 rounded-lg hover:bg-coffee-medium hover:text-white transition-all duration-300 shadow-sm"
+                  >
+                    <ShoppingCart className="h-5 w-5" />
+                    <span className="text-sm font-semibold">{getCartItemCount()} items</span>
+                    <span className="text-sm font-bold text-coffee-dark">${getCartTotal().toFixed(2)}</span>
+                    <span className="absolute -top-2 -right-2 bg-coffee-dark text-white text-xs rounded-full h-6 w-6 flex items-center justify-center font-bold">
+                      {getCartItemCount()}
+                    </span>
+                  </Link>
+                ) : (
+                  <Link 
+                    to="/coffee-shop" 
+                    className="flex items-center space-x-2 text-gray-400 px-4 py-2 rounded-lg border border-gray-200 hover:border-coffee-light hover:text-coffee-medium transition-all duration-300"
+                  >
+                    <ShoppingCart className="h-5 w-5" />
+                    <span className="text-sm">Cart</span>
+                  </Link>
+                )}
+              </div>
+
+              {/* Contact Button */}
+              <Link to="/contact" className="btn btn-primary text-sm">
+                Contact Us
               </Link>
-            ))}
-            
-            {/* Cart Button */}
-            {getCartItemCount() > 0 && (
-              <Link 
-                to="/coffee-shop" 
-                className="relative flex items-center space-x-2 text-coffee-dark hover:text-coffee-medium transition-colors"
-              >
-                <ShoppingCart className="h-5 w-5" />
-                <span className="text-sm font-medium">{getCartItemCount()}</span>
-                <span className="absolute -top-2 -right-2 bg-coffee-medium text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  {getCartItemCount()}
-                </span>
-              </Link>
-            )}
-            
-            <Link to="/contact" className="btn btn-primary text-sm">
-              Contact Us
-            </Link>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
