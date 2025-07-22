@@ -123,8 +123,12 @@ const About = () => {
           <div className="grid grid-3 gap-8">
             {team.map((member, index) => (
               <div key={index} className="card text-center">
-                <div className="w-24 h-24 bg-accent-warm rounded-full flex items-center justify-center text-coffee-dark font-bold text-xl mx-auto mb-6">
-                  {member.image}
+                <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
+                  <img 
+                    src={member.image}
+                    alt={`${member.name} - ${member.role}`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
                 <p className="text-coffee-medium font-medium mb-2">{member.role}</p>
