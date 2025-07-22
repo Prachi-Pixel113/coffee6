@@ -6,7 +6,7 @@ const Footer = () => {
     <>
       <footer className="text-white" style={{backgroundColor: '#6B4423'}}>
         <div className="container mx-auto px-6 py-28 pt-32">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
             
             {/* Brand Section */}
             <div className="space-y-4">
