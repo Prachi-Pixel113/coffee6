@@ -125,9 +125,9 @@ const Home = () => {
             {/* Left Content */}
             <div className="max-w-3xl space-y-8 fade-in-up">
               {/* Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent-gold/20 backdrop-blur-sm border border-accent-gold/30">
-                <Award className="h-4 w-4 text-accent-gold mr-2" />
-                <span className="text-accent-gold text-sm font-medium">Premium Coffee Experience</span>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30">
+                <Award className="h-4 w-4 text-yellow-300 mr-2" />
+                <span className="text-yellow-200 text-sm font-medium">Premium Coffee Experience</span>
               </div>
               
               {/* Enhanced Typography */}
