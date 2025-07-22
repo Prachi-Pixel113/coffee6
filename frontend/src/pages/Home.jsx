@@ -25,13 +25,36 @@ const Home = () => {
   return (
     <div className="home-page">
       {/* Hero Section */}
-      <section className="relative text-white overflow-hidden" style={{
-        backgroundImage: 'linear-gradient(rgba(62, 39, 35, 0.7), rgba(107, 68, 35, 0.8)), url("https://images.unsplash.com/photo-1675306408031-a9aad9f23308?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8fDE3NTMxNTU5Mjh8MA&ixlib=rb-4.1.0&q=85")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}>
-        <div className="absolute inset-0 bg-black opacity-10"></div>
+      <section className="relative text-white overflow-hidden hero-animated">
+        {/* Animated Coffee Background */}
+        <div className="absolute inset-0">
+          {/* Option 1: Video Background (when you have the video file) */}
+          {/* <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/path-to-your-coffee-video.mp4" type="video/mp4" />
+          </video> */}
+          
+          {/* Option 2: CSS Animation Background (temporary solution) */}
+          <div className="coffee-animation-bg">
+            <div className="coffee-stream coffee-stream-1"></div>
+            <div className="coffee-stream coffee-stream-2"></div>
+            <div className="coffee-stream coffee-stream-3"></div>
+          </div>
+          
+          {/* Fallback static background */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: 'url("https://images.unsplash.com/photo-1516036018940-b0159d2ab461?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBwb3VyaW5nfGVufDB8fHx8MTc1MzE1NjQ0Mnww&ixlib=rb-4.1.0&q=85")'
+            }}
+          ></div>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-coffee-dark via-coffee-medium to-coffee-light opacity-80"></div>
         <div className="relative container">
           <div className="section flex items-center min-h-[80vh]">
             <div className="max-w-2xl fade-in-up">
