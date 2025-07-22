@@ -325,15 +325,15 @@ p {
   }
 }
 
-/* Improved Hero Buttons */
+/* Improved Hero Buttons - Light Theme */
 .btn-primary-hero {
-  background: linear-gradient(135deg, var(--accent-gold) 0%, #DAA520 50%, #B8860B 100%);
-  color: var(--coffee-dark);
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+  color: #2D1B0E;
   padding: 18px 36px;
   font-size: 18px;
   font-weight: 700;
   border-radius: 50px;
-  box-shadow: 0 12px 32px rgba(218, 165, 32, 0.4);
+  box-shadow: 0 12px 32px rgba(255, 215, 0, 0.4);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -343,8 +343,9 @@ p {
 
 .btn-primary-hero:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 20px 48px rgba(218, 165, 32, 0.6);
-  border-color: rgba(218, 165, 32, 0.8);
+  box-shadow: 0 20px 48px rgba(255, 215, 0, 0.6);
+  border-color: rgba(255, 215, 0, 0.8);
+  background: linear-gradient(135deg, #FFA500 0%, #FFD700 50%, #FFFF00 100%);
 }
 
 .btn-primary-hero:active {
@@ -352,7 +353,7 @@ p {
 }
 
 .btn-secondary-hero {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
   color: white;
   border: 3px solid rgba(255, 255, 255, 0.9);
   padding: 16px 36px;
@@ -367,7 +368,7 @@ p {
 }
 
 .btn-secondary-hero:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.25);
   border-color: white;
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 16px 40px rgba(255, 255, 255, 0.3);
