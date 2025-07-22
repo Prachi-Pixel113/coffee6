@@ -116,10 +116,10 @@ const Home = () => {
               <p className="text-lg mb-8 text-cream-light leading-relaxed">
                 {heroData.description}
               </p>
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <Link to="/coffee-shop" className="btn btn-accent inline-flex items-center justify-center group">
                   {heroData.cta}
-                  <ArrowRight className="ml-1 h-3 w-3 sm:h-4 sm:w-4 transform group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-1 h-3 w-3 transform group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link to="/about" className="btn btn-secondary">
                   Learn Our Story
