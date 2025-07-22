@@ -1,45 +1,12 @@
 import React, { useState } from 'react';
 import { Search, Filter, ShoppingCart, Plus, Minus, Star } from 'lucide-react';
 import { menuData, shopInfoData } from '../mock';
+import { useCart } from '../contexts/CartContext';
 
 const CoffeeShop = () => {
   const [selectedCategory, setSelectedCategory] = useState(menuData.categories[0].id);
-  const [cart, setCart] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-
-  const addToCart = (item) => {
-    setCart(prevCart => {
-      const existingItem = prevCart.find(cartItem => cartItem.id === item.id);
-      if (existingItem) {
-        return prevCart.map(cartItem =>
-          cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
-            : cartItem
-        );
-      }
-      return [...prevCart, { ...item, quantity: 1 }];
-    });
-  };
-
-  const updateQuantity = (itemId, change) => {
-    setCart(prevCart => {
-      return prevCart.map(cartItem => {
-        if (cartItem.id === itemId) {
-          const newQuantity = cartItem.quantity + change;
-          return newQuantity > 0 ? { ...cartItem, quantity: newQuantity } : null;
-        }
-        return cartItem;
-      }).filter(Boolean);
-    });
-  };
-
-  const getCartTotal = () => {
-    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-  };
-
-  const getCartItemCount = () => {
-    return cart.reduce((total, item) => total + item.quantity, 0);
-  };
+  const { cart, addToCart, updateQuantity, getCartTotal, getCartItemCount } = useCart();
 
   const selectedCategoryData = menuData.categories.find(cat => cat.id === selectedCategory);
   const filteredItems = selectedCategoryData?.items.filter(item =>
