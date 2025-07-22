@@ -111,48 +111,72 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* Contact Info - Enhanced */}
-              <div className="space-y-6">
-                <h4 className="text-xl font-semibold text-white border-b-2 border-accent-gold pb-2 inline-block">Contact Info</h4>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4 group">
-                    <div className="w-10 h-10 bg-coffee-medium rounded-full flex items-center justify-center group-hover:bg-accent-gold transition-colors">
-                      <Mail className="h-5 w-5 text-accent-gold group-hover:text-coffee-dark" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-cream-medium/70 uppercase tracking-wide">Email</p>
-                      <a 
-                        href="mailto:hello@brewhaven.com" 
-                        className="text-cream-light hover:text-accent-gold transition-colors text-base"
-                      >
-                        hello@brewhaven.com
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-4 group">
-                    <div className="w-10 h-10 bg-coffee-medium rounded-full flex items-center justify-center group-hover:bg-accent-gold transition-colors">
-                      <Phone className="h-5 w-5 text-accent-gold group-hover:text-coffee-dark" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-cream-medium/70 uppercase tracking-wide">Phone</p>
-                      <a 
-                        href="tel:+1234567890" 
-                        className="text-cream-light hover:text-accent-gold transition-colors text-base"
-                      >
-                        (123) 456-7890
-                      </a>
+              {/* Contact Info - Enhanced with Modern Glass Card Design */}
+              <div className="space-y-8">
+                <div className="relative">
+                  <h4 className="text-xl font-bold text-white mb-1 tracking-tight">Contact Info</h4>
+                  <div className="w-12 h-1 bg-gradient-to-r from-accent-gold to-amber-400 rounded-full"></div>
+                  <p className="text-cream-medium/70 text-sm mt-3">Get in touch with us</p>
+                </div>
+                <div className="space-y-6">
+                  <div className="group relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm"></div>
+                    <div className="relative flex items-start space-x-4 p-4 rounded-xl transition-all duration-300">
+                      <div className="relative">
+                        <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center group-hover:from-amber-500 group-hover:to-accent-gold transition-all duration-300">
+                          <Mail className="h-5 w-5 text-accent-gold group-hover:text-coffee-dark" />
+                        </div>
+                        <div className="absolute -inset-1 bg-gradient-to-br from-amber-400/0 to-accent-gold/0 group-hover:from-amber-400/50 group-hover:to-accent-gold/50 rounded-xl blur-sm transition-all duration-300"></div>
+                      </div>
+                      <div>
+                        <p className="text-xs text-accent-gold font-semibold uppercase tracking-wider mb-1">Email</p>
+                        <a 
+                          href="mailto:hello@brewhaven.com" 
+                          className="text-cream-light hover:text-white transition-colors text-base font-medium"
+                        >
+                          hello@brewhaven.com
+                        </a>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-4 group">
-                    <div className="w-10 h-10 bg-coffee-medium rounded-full flex items-center justify-center group-hover:bg-accent-gold transition-colors">
-                      <MapPin className="h-5 w-5 text-accent-gold group-hover:text-coffee-dark" />
+                  
+                  <div className="group relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm"></div>
+                    <div className="relative flex items-start space-x-4 p-4 rounded-xl transition-all duration-300">
+                      <div className="relative">
+                        <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center group-hover:from-emerald-500 group-hover:to-green-600 transition-all duration-300">
+                          <Phone className="h-5 w-5 text-accent-gold group-hover:text-white" />
+                        </div>
+                        <div className="absolute -inset-1 bg-gradient-to-br from-emerald-400/0 to-green-600/0 group-hover:from-emerald-400/50 group-hover:to-green-600/50 rounded-xl blur-sm transition-all duration-300"></div>
+                      </div>
+                      <div>
+                        <p className="text-xs text-accent-gold font-semibold uppercase tracking-wider mb-1">Phone</p>
+                        <a 
+                          href="tel:+1234567890" 
+                          className="text-cream-light hover:text-white transition-colors text-base font-medium"
+                        >
+                          (123) 456-7890
+                        </a>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-xs text-cream-medium/70 uppercase tracking-wide">Address</p>
-                      <span className="text-cream-light text-base">
-                        123 Coffee Street<br />
-                        Downtown, City 12345
-                      </span>
+                  </div>
+                  
+                  <div className="group relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm"></div>
+                    <div className="relative flex items-start space-x-4 p-4 rounded-xl transition-all duration-300">
+                      <div className="relative">
+                        <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center group-hover:from-red-500 group-hover:to-pink-600 transition-all duration-300">
+                          <MapPin className="h-5 w-5 text-accent-gold group-hover:text-white" />
+                        </div>
+                        <div className="absolute -inset-1 bg-gradient-to-br from-red-400/0 to-pink-600/0 group-hover:from-red-400/50 group-hover:to-pink-600/50 rounded-xl blur-sm transition-all duration-300"></div>
+                      </div>
+                      <div>
+                        <p className="text-xs text-accent-gold font-semibold uppercase tracking-wider mb-1">Address</p>
+                        <span className="text-cream-light text-base font-medium leading-relaxed">
+                          123 Coffee Street<br />
+                          Downtown, City 12345
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
