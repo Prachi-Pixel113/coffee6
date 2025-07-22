@@ -73,6 +73,37 @@ async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
 
+# Contact Form Endpoint
+@api_router.post("/contact", response_model=ContactSubmission)
+async def submit_contact_form(contact_data: ContactSubmissionCreate):
+    try:
+        # Create contact submission object
+        contact_dict = contact_data.dict()
+        contact_obj = ContactSubmission(**contact_dict)
+        
+        # Store in MongoDB
+        _ = await db.contact_submissions.insert_one(contact_obj.dict())
+        
+        # Send email notification (for now, just log - will implement email later)
+        logger.info(f"New contact form submission from {contact_obj.name} ({contact_obj.email})")
+        logger.info(f"Subject: {contact_obj.subject}")
+        logger.info(f"Message: {contact_obj.message}")
+        
+        return contact_obj
+    except Exception as e:
+        logger.error(f"Error processing contact form: {str(e)}")
+        raise HTTPException(status_code=500, detail="Failed to process contact form submission")
+
+@api_router.get("/contact", response_model=List[ContactSubmission])
+async def get_contact_submissions():
+    """Get all contact submissions (admin endpoint)"""
+    try:
+        submissions = await db.contact_submissions.find().sort("timestamp", -1).to_list(100)
+        return [ContactSubmission(**submission) for submission in submissions]
+    except Exception as e:
+        logger.error(f"Error fetching contact submissions: {str(e)}")
+        raise HTTPException(status_code=500, detail="Failed to fetch contact submissions")
+
 # Include the router in the main app
 app.include_router(api_router)
 
