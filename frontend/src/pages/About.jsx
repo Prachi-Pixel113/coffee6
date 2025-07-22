@@ -15,19 +15,19 @@ const About = () => {
       name: 'Maria Santos',
       role: 'Head Barista',
       experience: '8 years experience',
-      image: 'MS'
+      image: 'https://images.unsplash.com/photo-1484981138541-3d074aa97716?crop=entropy&cs=srgb&fm=jpg&ixid=M3w2NzUzNjR8MHwxfHNlYXJjaHwzfHxjb2ZmZWUlMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzUzMTczNDczfDA&ixlib=rb-4.1.0&q=85'
     },
     {
       name: 'James Wilson',
       role: 'Coffee Roaster',
       experience: '12 years experience', 
-      image: 'JW'
+      image: 'https://images.unsplash.com/photo-1626548013576-65b158f7dd45?crop=entropy&cs=srgb&fm=jpg&ixid=M3w2NzUzNjR8MHwxfHNlYXJjaHwxfHxiYXJpc3RhJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzUzMTczNDQ3fDA&ixlib=rb-4.1.0&q=85'
     },
     {
       name: 'Lisa Chen',
       role: 'Store Manager',
       experience: '6 years experience',
-      image: 'LC'
+      image: 'https://images.unsplash.com/photo-1735787657870-2395d589e733?crop=entropy&cs=srgb&fm=jpg&ixid=M3w2NzUzNjR8MHwxfHNlYXJjaHwyfHxjb2ZmZWUlMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzUzMTczNDczfDA&ixlib=rb-4.1.0&q=85'
     }
   ];
 
