@@ -105,7 +105,7 @@
 user_problem_statement: "improve hero section"
 
 frontend:
-  - task: "Enhanced hero section with professional imagery and modern design"
+  - task: "Enhanced 'Why Choose Brew Haven?' section with professional layout design"
     implemented: true
     working: true
     file: "/app/frontend/src/pages/Home.jsx, /app/frontend/src/App.css"
@@ -115,7 +115,7 @@ frontend:
     status_history:
         - working: true
         - agent: "main"
-        - comment: "Successfully enhanced hero section with comprehensive improvements: 1) Professional image carousel with 3 high-quality coffee backgrounds (auto-advancing every 5s), 2) Updated all text content from dark brown to light colors - white, light gray, and bright gradients for optimal readability, 3) Enhanced 'Brew Haven' title with lighter gold gradient (#FFD700 to #F0E68C), 4) Improved CTA buttons with brighter orange/gold gradients and better contrast, 5) Updated badge and floating card with lighter yellow accents, 6) Removed statistical numbers for cleaner design, 7) Enhanced mobile responsiveness with full-width buttons. The hero section now features excellent readability with light content colors against professional coffee backgrounds."
+        - comment: "Successfully redesigned the features section with professional split layout: 1) Content structured as feature points on the left side with larger icons and improved spacing, 2) Added high-quality professional barista image on right side showing latte art creation, 3) Enhanced with floating stats card (10+ Years Experience, 500+ Happy Customers), 4) Added 'Our Promise' section with detailed bullet points about ethical sourcing and quality commitment, 5) Implemented hover effects and animations for better interactivity, 6) Perfect mobile responsiveness with stacked layout, 7) Professional styling with decorative elements and improved visual hierarchy. The section now has much better visual impact and communicates the brand values more effectively."
 
   - task: "Replace Coffee icon placeholders with actual product images in Featured Favorites section"
     implemented: true
