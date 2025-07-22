@@ -75,6 +75,7 @@ p {
   cursor: pointer;
   border: none;
   text-align: center;
+  font-size: 14px;
 }
 
 .btn-primary {
@@ -107,6 +108,23 @@ p {
 .btn-accent:hover {
   background: var(--accent-warm);
   transform: translateY(-2px);
+}
+
+/* Hero section specific button styles */
+.hero-animated .btn {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.hero-animated .btn-secondary {
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.hero-animated .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  color: white;
 }
 
 /* Container */
