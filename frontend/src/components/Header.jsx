@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Coffee } from 'lucide-react';
+import { Menu, X, Coffee, ShoppingCart } from 'lucide-react';
+import { useCart } from '../contexts/CartContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { getCartItemCount, getCartTotal } = useCart();
 
   const navItems = [
     { path: '/', label: 'Home' },
