@@ -168,14 +168,14 @@ const Home = () => {
 
             {/* Right Visual Elements */}
             <div className="hidden lg:block absolute right-20 top-1/2 transform -translate-y-1/2">
-              <div className="floating-card bg-white/10 backdrop-blur-lg p-6 rounded-2xl border border-white/20">
+              <div className="floating-card bg-white/15 backdrop-blur-lg p-6 rounded-2xl border border-white/30">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center">
-                    <Coffee className="h-6 w-6 text-coffee-dark" />
+                  <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                    <Coffee className="h-6 w-6 text-gray-800" />
                   </div>
                   <div>
                     <div className="text-white font-semibold">Fresh Roasted Daily</div>
-                    <div className="text-cream-light text-sm">Premium Quality Guaranteed</div>
+                    <div className="text-gray-200 text-sm">Premium Quality Guaranteed</div>
                   </div>
                 </div>
               </div>
