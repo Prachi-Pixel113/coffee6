@@ -132,16 +132,16 @@ const Home = () => {
               
               {/* Enhanced Typography */}
               <div className="space-y-6">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
-                  <span className="block text-4xl md:text-5xl lg:text-6xl text-accent-gold font-semibold mb-2">Welcome to</span>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+                  <span className="block text-4xl md:text-5xl lg:text-6xl text-cream-light font-semibold mb-2">Welcome to</span>
                   <span className="text-gradient-hero">Brew Haven</span>
                 </h1>
                 
-                <p className="text-2xl md:text-3xl text-cream-light font-light leading-relaxed">
+                <p className="text-2xl md:text-3xl text-white font-light leading-relaxed">
                   Where Every Cup Tells a Story
                 </p>
                 
-                <p className="text-lg md:text-xl text-cream-medium/90 leading-relaxed max-w-2xl">
+                <p className="text-lg md:text-xl text-gray-100 leading-relaxed max-w-2xl">
                   Discover the perfect blend of premium coffee beans, artisanal brewing methods, and cozy atmosphere. Your journey to coffee perfection starts here.
                 </p>
               </div>
