@@ -147,31 +147,22 @@ const Home = () => {
               </div>
 
               {/* Enhanced CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Link to="/coffee-shop" className="btn btn-accent-large inline-flex items-center justify-center group px-8 py-4">
-                  <Coffee className="mr-2 h-5 w-5" />
-                  Explore Our Menu
-                  <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-2 transition-transform" />
+              <div className="flex flex-col sm:flex-row gap-4 pt-6">
+                <Link to="/coffee-shop" className="btn btn-primary-hero group relative overflow-hidden">
+                  <span className="relative z-10 flex items-center justify-center">
+                    <Coffee className="mr-3 h-5 w-5" />
+                    Explore Our Menu
+                    <ArrowRight className="ml-3 h-5 w-5 transform group-hover:translate-x-1 transition-all duration-300" />
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent-gold to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
-                <Link to="/about" className="btn btn-secondary-large px-8 py-4">
-                  Learn Our Story
+                <Link to="/about" className="btn btn-secondary-hero group relative overflow-hidden">
+                  <span className="relative z-10 flex items-center justify-center">
+                    <Award className="mr-3 h-5 w-5" />
+                    Learn Our Story
+                  </span>
+                  <div className="absolute inset-0 bg-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
-              </div>
-
-              {/* Visual Stats */}
-              <div className="flex gap-8 pt-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-accent-gold">15+</div>
-                  <div className="text-sm text-cream-medium">Coffee Origins</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-accent-gold">20+</div>
-                  <div className="text-sm text-cream-medium">Signature Drinks</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-accent-gold">5★</div>
-                  <div className="text-sm text-cream-medium">Customer Rating</div>
-                </div>
               </div>
             </div>
 
