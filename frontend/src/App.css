@@ -317,41 +317,97 @@ p {
   }
 }
 
-/* Enhanced Buttons */
-.btn-accent-large {
-  background: linear-gradient(135deg, var(--accent-gold) 0%, #B8860B 100%);
+/* Improved Hero Buttons */
+.btn-primary-hero {
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #DAA520 50%, #B8860B 100%);
   color: var(--coffee-dark);
-  padding: 16px 32px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(218, 165, 32, 0.3);
-  transition: all 0.3s ease;
-}
-
-.btn-accent-large:hover {
-  transform: translateY(-3px);
+  padding: 18px 36px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50px;
   box-shadow: 0 12px 32px rgba(218, 165, 32, 0.4);
-  background: linear-gradient(135deg, #B8860B 0%, var(--accent-gold) 100%);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  border: 3px solid transparent;
 }
 
-.btn-secondary-large {
+.btn-primary-hero:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 48px rgba(218, 165, 32, 0.6);
+  border-color: rgba(218, 165, 32, 0.8);
+}
+
+.btn-primary-hero:active {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.btn-secondary-hero {
   background: transparent;
   color: white;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  padding: 14px 32px;
-  font-size: 16px;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  padding: 16px 36px;
+  font-size: 18px;
   font-weight: 600;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.btn-secondary-hero:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: white;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.btn-secondary-hero:active {
+  transform: translateY(-2px) scale(1.01);
+}
+
+/* Button Icon Animations */
+.btn-primary-hero .h-5,
+.btn-secondary-hero .h-5 {
   transition: all 0.3s ease;
 }
 
-.btn-secondary-large:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+.btn-primary-hero:hover .h-5:first-child,
+.btn-secondary-hero:hover .h-5:first-child {
+  transform: rotate(12deg) scale(1.1);
+}
+
+/* Enhanced Mobile Button Styles */
+@media (max-width: 768px) {
+  .btn-primary-hero,
+  .btn-secondary-hero {
+    padding: 16px 28px;
+    font-size: 16px;
+    border-radius: 40px;
+  }
+  
+  .btn-primary-hero:hover,
+  .btn-secondary-hero:hover {
+    transform: translateY(-2px) scale(1.01);
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-primary-hero,
+  .btn-secondary-hero {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+  
+  .hero-enhanced .flex-col .gap-4 {
+    gap: 12px;
+  }
 }
 
 /* Floating Card */
