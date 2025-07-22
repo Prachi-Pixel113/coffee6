@@ -39,22 +39,55 @@ const Home = () => {
             <source src="/path-to-your-coffee-video.mp4" type="video/mp4" />
           </video> */}
           
-          {/* Option 2: CSS Animation Background (temporary solution) */}
-          <div className="coffee-animation-bg">
-            <div className="coffee-stream coffee-stream-1"></div>
-            <div className="coffee-stream coffee-stream-2"></div>
-            <div className="coffee-stream coffee-stream-3"></div>
-            
-            {/* Coffee Mug Animation */}
-            <div className="coffee-mug-animation">
-              <div className="coffee-mug">
-                <div className="coffee-liquid"></div>
-                <div className="coffee-steam">
-                  <div className="steam-line"></div>
-                  <div className="steam-line"></div>
-                  <div className="steam-line"></div>
-                  <div className="steam-line"></div>
+          {/* Option 2: 3D Coffee Animation */}
+          <div className="coffee-3d-scene">
+            <div className="coffee-3d-container">
+              {/* 3D Coffee Mug */}
+              <div className="mug-3d">
+                <div className="mug-body">
+                  <div className="mug-inner"></div>
+                  <div className="mug-coffee">
+                    <div className="coffee-surface"></div>
+                  </div>
                 </div>
+                <div className="mug-handle"></div>
+                <div className="mug-shadow"></div>
+              </div>
+              
+              {/* 3D Human Hand Animation */}
+              <div className="hand-3d">
+                <div className="hand-arm"></div>
+                <div className="hand-palm">
+                  <div className="coffee-pot">
+                    <div className="pot-body"></div>
+                    <div className="pot-spout"></div>
+                    <div className="pot-handle"></div>
+                  </div>
+                </div>
+                <div className="fingers">
+                  <div className="finger finger-1"></div>
+                  <div className="finger finger-2"></div>
+                  <div className="finger finger-3"></div>
+                  <div className="finger finger-4"></div>
+                  <div className="thumb"></div>
+                </div>
+              </div>
+              
+              {/* 3D Coffee Stream */}
+              <div className="coffee-stream-3d">
+                <div className="stream-particle stream-1"></div>
+                <div className="stream-particle stream-2"></div>
+                <div className="stream-particle stream-3"></div>
+                <div className="stream-particle stream-4"></div>
+                <div className="stream-particle stream-5"></div>
+              </div>
+              
+              {/* 3D Steam Effect */}
+              <div className="steam-3d">
+                <div className="steam-particle steam-p1"></div>
+                <div className="steam-particle steam-p2"></div>
+                <div className="steam-particle steam-p3"></div>
+                <div className="steam-particle steam-p4"></div>
               </div>
             </div>
           </div>
