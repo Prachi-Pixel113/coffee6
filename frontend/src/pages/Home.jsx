@@ -2,8 +2,35 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Coffee, Users, Award } from 'lucide-react';
 import { heroData, testimonialsData } from '../mock';
+import { useCart } from '../contexts/CartContext';
 
 const Home = () => {
+  const { addToCart } = useCart();
+  
+  // Featured favorites data with matching IDs from menuData
+  const featuredItems = [
+    {
+      id: 3, // Caffe Latte ID from menuData
+      name: "Signature Latte",
+      description: "Our house blend with perfectly steamed milk and latte art",
+      price: 4.75,
+      image: "https://images.unsplash.com/photo-1531441802565-2948024f1b22?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxsYXR0ZSUyMGFydHxlbnwwfHx8fDE3NTMxNTk2Njh8MA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      id: 6, // Cold Brew ID from menuData
+      name: "Cold Brew Special", 
+      description: "Smooth cold brew with your choice of milk or cream",
+      price: 4.25,
+      image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxjb2ZmZWV8ZW58MHx8fHwxNzUzMTU5Njc0fDA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      id: 1, // Classic Espresso ID from menuData
+      name: "Espresso Perfection",
+      description: "Rich, bold shots from our premium espresso blend", 
+      price: 2.50,
+      image: "https://images.unsplash.com/photo-1596018589878-217d8603c4c6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxsYXR0ZSUyMGFydHxlbnwwfHx8fDE3NTMxNTk2Njh8MA&ixlib=rb-4.1.0&q=85"
+    }
+  ];
   const features = [
     {
       icon: <Coffee className="h-8 w-8" />,
