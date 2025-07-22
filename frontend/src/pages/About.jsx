@@ -135,6 +135,137 @@ const About = () => {
         </div>
       </section>
 
+      {/* Coffee Preparation Process Flow Chart */}
+      <section className="section bg-white">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Coffee Journey</h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              From carefully selected beans to your perfect cup, discover the artisanal process 
+              that makes every Brew Haven coffee exceptional.
+            </p>
+          </div>
+          
+          {/* Flow Chart */}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-3 gap-8 md:gap-12">
+              
+              {/* Step 1: Bean Selection & Roasting */}
+              <div className="flow-step text-center">
+                <div className="relative mb-6">
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-accent-gold">
+                    <img 
+                      src="https://images.unsplash.com/photo-1658521763683-5127f660bc9d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTMxNzMyODl8MA&ixlib=rb-4.1.0&q=85" 
+                      alt="Premium coffee beans selection and roasting"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-accent-gold rounded-full flex items-center justify-center text-white font-bold">
+                    1
+                  </div>
+                  {/* Arrow for desktop */}
+                  <div className="hidden lg:block absolute top-1/2 -right-8 transform -translate-y-1/2">
+                    <div className="w-6 h-0.5 bg-coffee-medium"></div>
+                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-coffee-medium border-t-2 border-b-2 border-t-transparent border-b-transparent"></div>
+                  </div>
+                  {/* Arrow for mobile */}
+                  <div className="lg:hidden absolute -bottom-8 left-1/2 transform -translate-x-1/2">
+                    <div className="h-6 w-0.5 bg-coffee-medium"></div>
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0 border-t-4 border-t-coffee-medium border-l-2 border-r-2 border-l-transparent border-r-transparent"></div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-coffee-dark">Premium Bean Selection</h3>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  We carefully source and select the finest coffee beans from sustainable farms worldwide, 
+                  then expertly roast them to unlock their unique flavor profiles.
+                </p>
+              </div>
+
+              {/* Step 2: Grinding */}
+              <div className="flow-step text-center">
+                <div className="relative mb-6">
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-accent-gold">
+                    <img 
+                      src="https://images.unsplash.com/photo-1588394952119-45f99780af73?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxncmluZGluZyUyMGNvZmZlZXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTMxNzMyOTd8MA&ixlib=rb-4.1.0&q=85" 
+                      alt="Professional coffee grinding process"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-accent-gold rounded-full flex items-center justify-center text-white font-bold">
+                    2
+                  </div>
+                  {/* Arrow for desktop */}
+                  <div className="hidden lg:block absolute top-1/2 -right-8 transform -translate-y-1/2">
+                    <div className="w-6 h-0.5 bg-coffee-medium"></div>
+                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-coffee-medium border-t-2 border-b-2 border-t-transparent border-b-transparent"></div>
+                  </div>
+                  {/* Arrow for mobile */}
+                  <div className="lg:hidden absolute -bottom-8 left-1/2 transform -translate-x-1/2">
+                    <div className="h-6 w-0.5 bg-coffee-medium"></div>
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0 border-t-4 border-t-coffee-medium border-l-2 border-r-2 border-l-transparent border-r-transparent"></div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-coffee-dark">Precision Grinding</h3>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  Using professional-grade grinders, we grind beans to the perfect consistency for each brewing method, 
+                  ensuring optimal extraction and flavor.
+                </p>
+              </div>
+
+              {/* Step 3: Brewing & Serving */}
+              <div className="flow-step text-center">
+                <div className="relative mb-6">
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg border-4 border-accent-gold">
+                    <img 
+                      src="https://images.unsplash.com/photo-1572281451006-34e8940bb5f2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxicmV3aW5nJTIwZXNwcmVzc298ZW58MHx8fGJsYWNrX2FuZF93aGl0ZXwxNzUzMTczMzA3fDA&ixlib=rb-4.1.0&q=85" 
+                      alt="Expert coffee brewing and serving"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-accent-gold rounded-full flex items-center justify-center text-white font-bold">
+                    3
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-coffee-dark">Expert Brewing</h3>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  Our skilled baristas craft each cup with precision, using the perfect water temperature, 
+                  timing, and technique to create your ideal coffee experience.
+                </p>
+              </div>
+            </div>
+
+            {/* Quality Promise */}
+            <div className="mt-16 text-center">
+              <div className="max-w-3xl mx-auto bg-gradient-to-r from-accent-warm to-cream-medium rounded-2xl p-8 md:p-12">
+                <Coffee className="h-16 w-16 text-coffee-dark mx-auto mb-6" />
+                <h3 className="text-2xl md:text-3xl font-bold text-coffee-dark mb-4">
+                  Our Quality Promise
+                </h3>
+                <p className="text-coffee-medium text-lg leading-relaxed">
+                  Every step of our process is carefully monitored by our expert team. 
+                  From bean selection to the final pour, we ensure consistent quality and 
+                  exceptional taste in every single cup we serve.
+                </p>
+                <div className="flex justify-center items-center mt-8 space-x-8">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-coffee-dark">100%</div>
+                    <div className="text-sm text-coffee-medium">Premium Beans</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-coffee-dark">15s</div>
+                    <div className="text-sm text-coffee-medium">Perfect Extraction</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-coffee-dark">65°C</div>
+                    <div className="text-sm text-coffee-medium">Ideal Temperature</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Story Section */}
       <section className="section bg-cream-medium">
         <div className="container">
