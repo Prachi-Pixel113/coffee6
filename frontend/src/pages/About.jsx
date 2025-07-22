@@ -3,13 +3,6 @@ import { Coffee } from 'lucide-react';
 import { aboutData } from '../mock';
 
 const About = () => {
-  const stats = [
-    { number: '9+', label: 'Years of Excellence' },
-    { number: '50K+', label: 'Happy Customers' },
-    { number: '100%', label: 'Premium Beans' },
-    { number: '24/7', label: 'Fresh Roasting' }
-  ];
-
   const team = [
     {
       name: 'Maria Santos',
