@@ -1,44 +1,74 @@
 import React from 'react';
-import { Coffee, Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Coffee, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Heart, Star } from 'lucide-react';
 
 const Footer = () => {
   return (
     <>
-      {/* Footer Separator */}
-      <div className="footer-separator bg-gradient-to-r from-accent-gold via-coffee-light to-accent-gold h-1"></div>
+      {/* Enhanced Footer Separator with Gradient */}
+      <div className="footer-separator bg-gradient-to-r from-transparent via-accent-gold to-transparent h-px relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-gold via-amber-300 to-accent-gold h-1 blur-sm"></div>
+        <div className="relative bg-gradient-to-r from-accent-gold via-amber-400 to-accent-gold h-0.5"></div>
+      </div>
       
-      <footer className="bg-coffee-dark text-cream-light relative overflow-hidden">
-        {/* Decorative Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="footer-pattern"></div>
+      <footer className="bg-gradient-to-br from-coffee-dark via-slate-900 to-coffee-dark text-cream-light relative overflow-hidden">
+        {/* Enhanced Decorative Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          <div className="footer-pattern opacity-10"></div>
+          {/* Floating Coffee Bean Shapes */}
+          <div className="absolute top-10 left-10 w-2 h-2 bg-accent-gold/20 rounded-full animate-pulse"></div>
+          <div className="absolute top-32 right-20 w-3 h-3 bg-amber-400/10 rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-accent-gold/30 rounded-full animate-pulse delay-2000"></div>
         </div>
         
         {/* Main Footer Content */}
         <div className="container relative z-10">
-          <div className="py-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-              {/* Brand Section - Enhanced */}
-              <div className="space-y-6">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-accent-gold rounded-full flex items-center justify-center">
-                    <Coffee className="h-6 w-6 text-coffee-dark" />
+          <div className="py-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+              {/* Brand Section - Enhanced with Modern Card Design */}
+              <div className="space-y-8">
+                <div className="group">
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="relative">
+                      <div className="w-14 h-14 bg-gradient-to-br from-amber-400 to-accent-gold rounded-2xl flex items-center justify-center transform group-hover:rotate-12 transition-all duration-500 shadow-lg">
+                        <Coffee className="h-7 w-7 text-coffee-dark" />
+                      </div>
+                      <div className="absolute -inset-1 bg-gradient-to-br from-amber-400/50 to-accent-gold/50 rounded-2xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    <div>
+                      <span className="text-3xl font-bold text-white tracking-tight">Brew Haven</span>
+                      <div className="flex items-center space-x-1 mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-3 w-3 text-amber-400 fill-current" />
+                        ))}
+                        <span className="text-xs text-cream-medium/70 ml-2">Premium Quality</span>
+                      </div>
+                    </div>
                   </div>
-                  <span className="text-2xl font-bold text-white">Brew Haven</span>
+                  <p className="text-cream-medium/90 text-base leading-relaxed font-light">
+                    Your premium destination for the finest coffee experience. 
+                    From bean to cup, we craft perfection in every sip with 
+                    <span className="text-accent-gold font-medium"> artisan precision</span>.
+                  </p>
                 </div>
-                <p className="text-cream-medium text-base leading-relaxed">
-                  Your premium destination for the finest coffee experience. 
-                  From bean to cup, we craft perfection in every sip.
-                </p>
-                <div className="flex space-x-4">
-                  <a href="#" className="w-10 h-10 bg-coffee-medium rounded-full flex items-center justify-center text-cream-medium hover:bg-accent-gold hover:text-coffee-dark transition-all duration-300 transform hover:scale-110">
-                    <Facebook className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-coffee-medium rounded-full flex items-center justify-center text-cream-medium hover:bg-accent-gold hover:text-coffee-dark transition-all duration-300 transform hover:scale-110">
-                    <Twitter className="h-5 w-5" />
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-coffee-medium rounded-full flex items-center justify-center text-cream-medium hover:bg-accent-gold hover:text-coffee-dark transition-all duration-300 transform hover:scale-110">
-                    <Instagram className="h-5 w-5" />
-                  </a>
+                
+                {/* Enhanced Social Media with Modern Styling */}
+                <div className="space-y-4">
+                  <h5 className="text-sm font-semibold text-accent-gold tracking-wider uppercase">Follow Our Journey</h5>
+                  <div className="flex space-x-3">
+                    <a href="#" className="group relative w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center text-cream-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1">
+                      <Facebook className="h-5 w-5 relative z-10" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-blue-700/0 group-hover:from-blue-600/20 group-hover:to-blue-700/20 rounded-xl transition-all duration-300"></div>
+                    </a>
+                    <a href="#" className="group relative w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center text-cream-medium hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1">
+                      <Twitter className="h-5 w-5 relative z-10" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-600/0 group-hover:from-cyan-500/20 group-hover:to-blue-600/20 rounded-xl transition-all duration-300"></div>
+                    </a>
+                    <a href="#" className="group relative w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center text-cream-medium hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1">
+                      <Instagram className="h-5 w-5 relative z-10" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-pink-600/0 to-purple-600/0 group-hover:from-pink-600/20 group-hover:to-purple-600/20 rounded-xl transition-all duration-300"></div>
+                    </a>
+                  </div>
                 </div>
               </div>
 
