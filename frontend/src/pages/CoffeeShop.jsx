@@ -59,6 +59,17 @@ const CoffeeShop = () => {
       </section>
 
       <div className="container py-8">
+        {/* Floating Cart Button */}
+        {cart.length > 0 && (
+          <div className="fixed bottom-6 right-6 z-50">
+            <button className="bg-coffee-dark text-white px-6 py-3 rounded-full shadow-lg hover:bg-coffee-medium transition-colors flex items-center space-x-3">
+              <ShoppingCart className="h-5 w-5" />
+              <span className="font-semibold">{getCartItemCount()} items</span>
+              <span className="text-accent-gold font-bold">${getCartTotal().toFixed(2)}</span>
+            </button>
+          </div>
+        )}
+
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Sidebar */}
           <div className="lg:col-span-1">
