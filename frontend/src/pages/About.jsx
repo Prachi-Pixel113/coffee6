@@ -166,32 +166,58 @@ const About = () => {
 
 
       {/* Team Section */}
-      <section className="section bg-white">
+      <AnimatedSection 
+        className="section bg-white"
+        variants={fadeInUpVariants}
+      >
         <div className="container">
-          <div className="text-center mb-16">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
             <p className="text-lg text-text-secondary">
               The passionate people behind your perfect cup
             </p>
-          </div>
-          <div className="grid grid-3 gap-8">
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-3 gap-8"
+            variants={staggerContainerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             {team.map((member, index) => (
-              <div key={index} className="card text-center">
+              <motion.div 
+                key={index} 
+                className="card text-center"
+                variants={staggerItemVariants}
+                whileHover={{ 
+                  y: -5,
+                  transition: { type: "spring", stiffness: 300 }
+                }}
+              >
                 <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
-                  <img 
+                  <LazyImage 
                     src={member.image}
                     alt={`${member.name} - ${member.role}`}
                     className="w-full h-full object-cover"
+                    priority={index === 0}
+                    sizes={[150, 200, 300]}
                   />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
                 <p className="text-coffee-medium font-medium mb-2">{member.role}</p>
                 <p className="text-text-secondary">{member.experience}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Enhanced Coffee Journey - Complete Process */}
       <section className="section bg-gradient-to-br from-cream-light to-white">
