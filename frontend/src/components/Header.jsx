@@ -3,7 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Coffee, ShoppingCart, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '../contexts/CartContext';
-import { useSmoothScroll, useScrollPosition } from '../hooks/useSmoothScroll';
+import { useOptimizedSmoothScroll, useOptimizedScrollPosition } from '../hooks/useOptimizedScroll';
+import { useAccessibleScroll } from '../hooks/useAccessibleScroll';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
