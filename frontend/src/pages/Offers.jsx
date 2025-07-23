@@ -49,7 +49,7 @@ const Offers = () => {
       <section 
         className="section bg-gradient-to-r from-accent-gold to-accent-warm text-white relative overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(139, 69, 19, 0.8), rgba(101, 67, 33, 0.8)), url('https://images.unsplash.com/photo-1453614512568-c4024d13c247?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBzaG9wfGVufDB8fHx8MTc1MzI1MzI1OHww&ixlib=rb-4.1.0&q=85')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1453614512568-c4024d13c247?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBzaG9wfGVufDB8fHx8MTc1MzI1MzI1OHww&ixlib=rb-4.1.0&q=85')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
