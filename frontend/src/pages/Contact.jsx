@@ -259,7 +259,7 @@ const Contact = () => {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full bg-golden hover:bg-golden-dark text-coffee-dark font-medium py-4 px-8 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                      className="w-full bg-golden hover:bg-golden-dark text-coffee-dark font-medium py-4 px-8 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 border-2 border-coffee-dark"
                     >
                       {loading ? (
                         <>
