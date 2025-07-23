@@ -1,37 +1,78 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Offers from "./pages/Offers";
-import CoffeeShop from "./pages/CoffeeShop";
-import Contact from "./pages/Contact";
-import Footer from "./components/Footer";
-import ScrollToTop from "./components/ScrollToTop";
 import { CartProvider } from "./contexts/CartContext";
+import { LazyLoadingErrorBoundary, withPageLazyLoading } from "./components/LazyComponentLoader";
+import { performanceMonitor } from "./utils/performanceMonitor";
+
+// Lazy load components
+const Header = React.lazy(() => import("./components/Header"));
+const Footer = React.lazy(() => import("./components/Footer"));
+const ScrollToTop = React.lazy(() => import("./components/ScrollToTop"));
+
+// Lazy load pages
+const Home = React.lazy(() => import("./pages/Home"));
+const About = React.lazy(() => import("./pages/About"));
+const Offers = React.lazy(() => import("./pages/Offers"));
+const CoffeeShop = React.lazy(() => import("./pages/CoffeeShop"));
+const Contact = React.lazy(() => import("./pages/Contact"));
+
+// Wrap pages with lazy loading HOC
+const LazyHome = withPageLazyLoading(Home, "Home");
+const LazyAbout = withPageLazyLoading(About, "About");
+const LazyOffers = withPageLazyLoading(Offers, "Offers");
+const LazyCoffeeShop = withPageLazyLoading(CoffeeShop, "Coffee Shop");
+const LazyContact = withPageLazyLoading(Contact, "Contact");
+
+// Loading component for layout components
+const LayoutLoading = () => (
+  <div className="animate-pulse bg-gray-200 h-16 w-full"></div>
+);
 
 function App() {
+  // Start performance monitoring
+  React.useEffect(() => {
+    performanceMonitor.mark('app-start');
+    
+    return () => {
+      performanceMonitor.mark('app-end');
+      performanceMonitor.measure('app-lifecycle', 'app-start', 'app-end');
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <CartProvider>
-        <BrowserRouter>
-          <Header />
-          <main className="min-h-screen">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/offers" element={<Offers />} />
-              <Route path="/coffee-shop" element={<CoffeeShop />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
-          <Footer />
-          <ScrollToTop />
-        </BrowserRouter>
-      </CartProvider>
-    </div>
+    <LazyLoadingErrorBoundary>
+      <div className="App">
+        <CartProvider>
+          <BrowserRouter>
+            <Suspense fallback={<LayoutLoading />}>
+              <Header />
+            </Suspense>
+            
+            <main className="min-h-screen">
+              <Routes>
+                <Route path="/" element={<LazyHome />} />
+                <Route path="/about" element={<LazyAbout />} />
+                <Route path="/offers" element={<LazyOffers />} />
+                <Route path="/coffee-shop" element={<LazyCoffeeShop />} />
+                <Route path="/contact" element={<LazyContact />} />
+              </Routes>
+            </main>
+            
+            <Suspense fallback={<LayoutLoading />}>
+              <Footer />
+            </Suspense>
+            
+            <Suspense fallback={null}>
+              <ScrollToTop />
+            </Suspense>
+          </BrowserRouter>
+        </CartProvider>
+      </div>
+    </LazyLoadingErrorBoundary>
   );
 }
+
+export default App;
 
 export default App;
