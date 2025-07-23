@@ -11,8 +11,9 @@ const Header = () => {
   const [showScrollNav, setShowScrollNav] = useState(false);
   const location = useLocation();
   const { getCartItemCount, getCartTotal } = useCart();
-  const { scrollToElement } = useSmoothScroll();
-  const { scrollPosition } = useScrollPosition();
+  const { scrollToElement } = useOptimizedSmoothScroll();
+  const { scrollPosition } = useOptimizedScrollPosition();
+  const { prefersReducedMotion } = useAccessibleScroll();
 
   const navItems = [
     { path: '/', label: 'Home' },
