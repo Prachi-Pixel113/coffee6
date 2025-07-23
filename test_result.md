@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "frontend optimization and smooth scrolling"
+user_problem_statement: "frontend optimization and smooth scrolling - site loading is very slow, smooth scrolling performance issues, bundle size optimization, accessibility improvements for smooth scrolling, code splitting and lazy loading enhancements"
 
 frontend:
   - task: "Implement image lazy loading and performance optimizations"
