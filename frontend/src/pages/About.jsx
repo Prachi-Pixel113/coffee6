@@ -274,7 +274,7 @@ const About = () => {
                           <LazyImage 
                             src={step.images[0]}
                             alt={step.title}
-                            className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
+                            className="w-full h-80 object-cover transition-transform duration-300 hover:scale-105"
                             sizes={[600, 800, 1200]}
                             quality={85}
                           />
