@@ -148,7 +148,7 @@ const Offers = () => {
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-accent-gold rounded-full text-coffee-dark mb-8">
-              <Users className="h-10 w-10" />
+              <Users className="h-10 w-10 text-white" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-cream-light">Join Our Loyalty Program</h2>
             <p className="text-xl mb-8 text-accent-warm">
