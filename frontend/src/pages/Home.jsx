@@ -19,6 +19,16 @@ import {
 const Home = () => {
   const { addToCart } = useCart();
   
+  // Performance monitoring
+  React.useEffect(() => {
+    performanceMonitor.mark('home-page-start');
+    
+    return () => {
+      performanceMonitor.mark('home-page-end');
+      performanceMonitor.measure('home-page-render', 'home-page-start', 'home-page-end');
+    };
+  }, []);
+  
   // Hero carousel images with optimized data
   const heroImages = useMemo(() => [
     {
