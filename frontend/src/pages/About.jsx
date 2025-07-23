@@ -559,6 +559,8 @@ const About = () => {
                   <div className="steam-line steam-1"></div>
                   <div className="steam-line steam-2"></div>
                   <div className="steam-line steam-3"></div>
+                  <div className="steam-line steam-4"></div>
+                  <div className="steam-line steam-5"></div>
                 </div>
               </div>
               <h3 className="text-2xl font-semibold text-coffee-dark mb-4">
