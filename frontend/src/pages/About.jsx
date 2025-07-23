@@ -345,13 +345,13 @@ const About = () => {
                     )}
                     
                     {step.profiles && (
-                      <div className="bg-coffee-dark rounded-xl p-6 text-white">
-                        <h4 className="font-semibold mb-3">Roasting Profiles Available:</h4>
+                      <div className="bg-cream-light border-2 border-coffee-light rounded-xl p-6">
+                        <h4 className="font-semibold mb-3 text-coffee-dark text-center">Roasting Profiles Available:</h4>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm">
                           {step.profiles.map((profile, profileIndex) => (
-                            <div key={profileIndex}>
-                              <span className="block font-medium">{profile.split(' - ')[0]}</span>
-                              {profile.split(' - ')[1]}
+                            <div key={profileIndex} className="bg-white rounded-lg p-3 shadow-sm">
+                              <span className="block font-medium text-coffee-dark">{profile.split(' - ')[0]}</span>
+                              <span className="text-coffee-medium">{profile.split(' - ')[1]}</span>
                             </div>
                           ))}
                         </div>
