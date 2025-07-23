@@ -8,6 +8,7 @@ import Offers from "./pages/Offers";
 import CoffeeShop from "./pages/CoffeeShop";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import { CartProvider } from "./contexts/CartContext";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             </Routes>
           </main>
           <Footer />
+          <ScrollToTop />
         </BrowserRouter>
       </CartProvider>
     </div>
