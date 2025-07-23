@@ -96,30 +96,39 @@ const About = () => {
       name: "Espresso Perfection",
       description: "Intense, concentrated coffee extracted under 9 bars of pressure in 25-30 seconds.",
       image: "https://images.unsplash.com/photo-1572281451006-34e8940bb5f2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxicmV3aW5nJTIwZXNwcmVzc298ZW58MHx8fGJsYWNrX2FuZF93aGl0ZXwxNzUzMTczMzA3fDA&ixlib=rb-4.1.0&q=85",
+      technique: "Pressure Extraction",
+      flavor: "Rich & Intense",
       specs: [
         { label: "Water Temperature", value: "93°C" },
         { label: "Extraction Time", value: "25-30s" },
-        { label: "Pressure", value: "9 bars" }
+        { label: "Pressure", value: "9 bars" },
+        { label: "Grind Size", value: "Fine" }
       ]
     },
     {
       name: "Pour Over Artistry",
       description: "Manual brewing method that allows precise control over water temperature and pouring technique.",
       image: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxicmV3aW5nJTIwcG91ciUyMG92ZXJ8ZW58MHx8fGJsYWNrX2FuZF93aGl0ZXwxNzUzMTczMzA3fDA&ixlib=rb-4.1.0&q=85",
+      technique: "Manual Pour Method",
+      flavor: "Clean & Bright",
       specs: [
         { label: "Water Temperature", value: "96°C" },
         { label: "Brew Time", value: "3-4min" },
-        { label: "Ratio", value: "1:16" }
+        { label: "Ratio", value: "1:16" },
+        { label: "Grind Size", value: "Medium" }
       ]
     },
     {
       name: "French Press Classic",
       description: "Full immersion brewing that extracts rich, full-bodied coffee with maximum flavor retention.",
-      image: "https://images.unsplash.com/photo-1587049633312-d628ae50a8dd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxicmV3aW5nJTIwZnJlbmNoJTIwcHJlc3N8ZW58MHx8fGJsYWNrX2FuZF93aGl0ZXwxNzUzMTczMzA3fDA&ixlib=rb-4.1.0&q=85",
+      image: "https://images.unsplash.com/photo-1569387813408-72b66e687493?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxmcmVuY2glMjBwcmVzc3xlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTMyNDg5OTl8MA&ixlib=rb-4.1.0&q=85",
+      technique: "Full Immersion",
+      flavor: "Bold & Full-Bodied",
       specs: [
         { label: "Water Temperature", value: "94°C" },
         { label: "Steep Time", value: "4min" },
-        { label: "Ratio", value: "1:15" }
+        { label: "Ratio", value: "1:15" },
+        { label: "Grind Size", value: "Coarse" }
       ]
     }
   ], []);
