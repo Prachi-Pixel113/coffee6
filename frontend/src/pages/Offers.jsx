@@ -105,10 +105,12 @@ const Offers = () => {
                 <div key={offer.id} className="card group hover:shadow-xl transition-all duration-300 overflow-hidden">
                   {/* Offer Image */}
                   <div className="w-full h-48 mb-4 overflow-hidden rounded-lg">
-                    <img
+                    <LazyImage
                       src={offer.image}
                       alt={offer.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes={[400, 600, 800]}
+                      quality={85}
                     />
                   </div>
                   
