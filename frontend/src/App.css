@@ -107,18 +107,28 @@ html {
 }
 
 .steam-1 {
-  left: -10px;
+  left: -12px;
   animation-delay: 0s;
 }
 
 .steam-2 {
-  left: 0px;
-  animation-delay: 0.7s;
+  left: -6px;
+  animation-delay: 0.4s;
 }
 
 .steam-3 {
-  left: 10px;
-  animation-delay: 1.4s;
+  left: 0px;
+  animation-delay: 0.8s;
+}
+
+.steam-4 {
+  left: 6px;
+  animation-delay: 1.2s;
+}
+
+.steam-5 {
+  left: 12px;
+  animation-delay: 1.6s;
 }
 
 @keyframes steam {
