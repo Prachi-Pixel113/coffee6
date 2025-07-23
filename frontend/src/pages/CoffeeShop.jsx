@@ -170,14 +170,14 @@ const CoffeeShop = () => {
                         <div className="flex items-center space-x-3">
                           <button
                             onClick={() => updateQuantity(item.id, -1)}
-                            className="w-8 h-8 rounded-full bg-coffee-light text-coffee-dark flex items-center justify-center hover:bg-coffee-medium hover:text-white transition-colors shadow-sm"
+                            className="w-8 h-8 rounded-full bg-coffee-light text-coffee-dark border-2 border-coffee-medium flex items-center justify-center hover:bg-coffee-medium hover:text-white hover:border-coffee-dark transition-colors shadow-sm"
                           >
                             <Minus className="h-4 w-4" />
                           </button>
                           <span className="font-semibold">{cartItem.quantity}</span>
                           <button
                             onClick={() => updateQuantity(item.id, 1)}
-                            className="w-8 h-8 rounded-full bg-coffee-light text-coffee-dark flex items-center justify-center hover:bg-coffee-medium hover:text-white transition-colors shadow-sm"
+                            className="w-8 h-8 rounded-full bg-coffee-light text-coffee-dark border-2 border-coffee-medium flex items-center justify-center hover:bg-coffee-medium hover:text-white hover:border-coffee-dark transition-colors shadow-sm"
                           >
                             <Plus className="h-4 w-4" />
                           </button>
