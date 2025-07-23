@@ -101,24 +101,24 @@ html {
   position: absolute;
   width: 2px;
   height: 20px;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  background: linear-gradient(to top, rgba(62, 39, 35, 0.8), rgba(62, 39, 35, 0));
   border-radius: 50%;
   animation: steam 2s ease-in-out infinite;
 }
 
 .steam-1 {
-  left: -6px;
+  left: -4px;
   animation-delay: 0s;
 }
 
 .steam-2 {
   left: 0px;
-  animation-delay: 0.5s;
+  animation-delay: 0.7s;
 }
 
 .steam-3 {
-  left: 6px;
-  animation-delay: 1s;
+  left: 4px;
+  animation-delay: 1.4s;
 }
 
 @keyframes steam {
