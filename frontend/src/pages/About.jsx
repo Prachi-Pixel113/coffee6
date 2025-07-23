@@ -429,7 +429,7 @@ const About = () => {
                     quality={85}
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex-1 flex flex-col">
                   <div className="text-center mb-4">
                     <h4 className="text-xl font-bold text-coffee-dark mb-3">{method.name}</h4>
                     <div className="flex items-center justify-center gap-2 mb-3">
