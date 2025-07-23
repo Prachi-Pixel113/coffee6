@@ -1,8 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Coffee, Users, Award } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { heroData, testimonialsData } from '../mock';
 import { useCart } from '../contexts/CartContext';
+import LazyImage from '../components/LazyImage';
+import HeroCarousel from '../components/HeroCarousel';
+import { 
+  AnimatedSection, 
+  fadeInUpVariants, 
+  fadeInLeftVariants, 
+  fadeInRightVariants,
+  staggerContainerVariants,
+  staggerItemVariants 
+} from '../hooks/useScrollAnimation';
 
 const Home = () => {
   const { addToCart } = useCart();
