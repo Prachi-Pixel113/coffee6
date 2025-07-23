@@ -462,7 +462,7 @@ const About = () => {
                   </div>
                   
                   {/* Brewing Specifications */}
-                  <div className="bg-gray-50 rounded-lg p-4">
+                  <div className="bg-gray-50 rounded-lg p-4 mt-auto">
                     <h5 className="font-semibold text-coffee-dark text-center mb-3 text-sm">
                       Brewing Specifications
                     </h5>
