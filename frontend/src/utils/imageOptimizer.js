@@ -284,8 +284,8 @@ export const imagePerformanceTracker = {
           console.log('Layout shift detected:', entry.value);
           
           // Report to analytics
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'layout_shift', {
+          if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
+            window.gtag('event', 'layout_shift', {
               event_category: 'performance',
               value: Math.round(entry.value * 1000)
             });
