@@ -82,12 +82,6 @@ const Contact = () => {
       title: 'Location',
       details: ['123 Coffee Street', 'Downtown District, CD 12345'],
       description: 'Visit our cozy café'
-    },
-    {
-      icon: Clock,
-      title: 'Hours',
-      details: ['Mon-Fri: 6:00 AM - 9:00 PM', 'Sat-Sun: 7:00 AM - 10:00 PM'],
-      description: 'We\'re here to serve you'
     }
   ];
 
