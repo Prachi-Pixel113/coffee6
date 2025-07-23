@@ -127,19 +127,38 @@ const About = () => {
   return (
     <div className="about-page">
       {/* Hero Section */}
-      <section className="section bg-gradient-to-r from-cream-dark to-cream-medium">
+      <AnimatedSection 
+        className="section bg-gradient-to-r from-cream-dark to-cream-medium"
+        variants={fadeInUpVariants}
+      >
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{aboutData.title}</h1>
-            <p className="text-xl md:text-2xl text-coffee-medium mb-8 font-medium">
+          <motion.div 
+            className="max-w-4xl mx-auto text-center"
+            variants={staggerContainerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.h1 
+              className="text-4xl md:text-5xl font-bold mb-6"
+              variants={staggerItemVariants}
+            >
+              {aboutData.title}
+            </motion.h1>
+            <motion.p 
+              className="text-xl md:text-2xl text-coffee-medium mb-8 font-medium"
+              variants={staggerItemVariants}
+            >
               {aboutData.subtitle}
-            </p>
-            <p className="text-lg text-text-secondary leading-relaxed">
+            </motion.p>
+            <motion.p 
+              className="text-lg text-text-secondary leading-relaxed"
+              variants={staggerItemVariants}
+            >
               {aboutData.description}
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
-      </section>
+      </AnimatedSection>
 
 
 
