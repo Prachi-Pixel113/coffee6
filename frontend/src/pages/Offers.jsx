@@ -169,9 +169,6 @@ const Offers = () => {
                 <div className="text-accent-warm font-medium">Free Treat</div>
               </div>
             </div>
-            <button className="btn btn-accent">
-              Sign Up Today
-            </button>
           </div>
         </div>
       </section>
