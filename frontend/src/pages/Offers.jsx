@@ -150,8 +150,8 @@ const Offers = () => {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-accent-gold rounded-full text-coffee-dark mb-8">
               <Users className="h-10 w-10" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Loyalty Program</h2>
-            <p className="text-xl mb-8 text-cream-medium">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Join Our Loyalty Program</h2>
+            <p className="text-xl mb-8 text-white">
               Earn points with every purchase and unlock exclusive rewards, birthday treats, 
               and early access to new menu items.
             </p>
