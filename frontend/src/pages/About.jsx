@@ -389,7 +389,7 @@ const About = () => {
             {brewingMethods.map((method, index) => (
               <motion.div 
                 key={index} 
-                className="brewing-method-card bg-white rounded-2xl shadow-lg overflow-hidden"
+                className="brewing-method-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100"
                 variants={staggerItemVariants}
                 whileHover={{ 
                   y: -8,
@@ -406,15 +406,34 @@ const About = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h4 className="text-xl font-semibold text-coffee-dark mb-3">{method.name}</h4>
-                  <p className="text-text-secondary text-sm mb-4">{method.description}</p>
-                  <div className="space-y-2 text-xs text-coffee-medium">
-                    {method.specs.map((spec, specIndex) => (
-                      <div key={specIndex} className="flex justify-between">
-                        <span>{spec.label}:</span>
-                        <span className="font-medium">{spec.value}</span>
-                      </div>
-                    ))}
+                  <div className="text-center mb-4">
+                    <h4 className="text-xl font-bold text-coffee-dark mb-2">{method.name}</h4>
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <span className="px-3 py-1 bg-accent-gold text-white text-xs font-medium rounded-full">
+                        {method.technique}
+                      </span>
+                      <span className="px-3 py-1 bg-coffee-light text-coffee-dark text-xs font-medium rounded-full">
+                        {method.flavor}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-text-secondary text-sm mb-4 text-center leading-relaxed">
+                    {method.description}
+                  </p>
+                  
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <h5 className="font-semibold text-coffee-dark text-center mb-3 text-sm">
+                      Brewing Specifications
+                    </h5>
+                    <div className="grid grid-cols-2 gap-3">
+                      {method.specs.map((spec, specIndex) => (
+                        <div key={specIndex} className="text-center">
+                          <div className="text-xs text-coffee-medium mb-1">{spec.label}</div>
+                          <div className="font-bold text-coffee-dark text-sm">{spec.value}</div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </motion.div>
