@@ -78,7 +78,7 @@ const Offers = () => {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 ${
                   selectedCategory === category.id
-                    ? 'bg-coffee-medium text-white shadow-lg'
+                    ? 'bg-gray-200 text-coffee-dark shadow-lg border-2 border-coffee-medium'
                     : 'bg-gray-100 text-text-secondary hover:bg-gray-200'
                 }`}
               >
