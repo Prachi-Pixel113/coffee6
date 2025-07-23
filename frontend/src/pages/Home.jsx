@@ -313,46 +313,80 @@ const Home = () => {
         </div>
       </AnimatedSection>
 
-      {/* Quick Menu Preview */}
-      <section className="section bg-white">
+      {/* Quick Menu Preview with Animations */}
+      <AnimatedSection 
+        id="featured-menu"
+        className="section bg-white" 
+        variants={fadeInUpVariants}
+      >
         <div className="container">
-          <div className="text-center mb-16">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Favorites</h2>
             <p className="text-lg text-text-secondary">
               Discover our most popular coffee creations
             </p>
-          </div>
-          <div className="grid grid-3 gap-8">
-            {featuredItems.map((item) => (
-              <div key={item.id} className="card">
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-3 gap-8"
+            variants={staggerContainerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {featuredItems.map((item, index) => (
+              <motion.div 
+                key={item.id} 
+                className="card group"
+                variants={staggerItemVariants}
+                whileHover={{ 
+                  y: -8,
+                  transition: { type: "spring", stiffness: 300 }
+                }}
+              >
                 <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
-                  <img 
+                  <LazyImage 
                     src={item.image} 
                     alt={item.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
                 <p className="text-text-secondary mb-4">{item.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-2xl font-bold text-coffee-medium">${item.price.toFixed(2)}</span>
-                  <button 
+                  <motion.button 
                     onClick={() => addToCart(item)}
                     className="btn btn-primary hover:bg-coffee-dark transition-colors"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     Add to Cart
-                  </button>
+                  </motion.button>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
-          <div className="text-center mt-12">
+          </motion.div>
+          
+          <motion.div 
+            className="text-center mt-12"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+          >
             <Link to="/coffee-shop" className="btn btn-secondary">
               View Full Menu
             </Link>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Testimonials */}
       <section className="section bg-cream-dark">
