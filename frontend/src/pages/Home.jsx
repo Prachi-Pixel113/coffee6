@@ -366,6 +366,9 @@ const Home = () => {
                     src={item.image} 
                     alt={item.name}
                     className="w-full h-full group-hover:scale-110 transition-transform duration-500"
+                    priority={index === 0} // Prioritize first image
+                    quality={85}
+                    sizes={[400, 600, 800]}
                   />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
