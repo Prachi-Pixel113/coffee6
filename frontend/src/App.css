@@ -20,15 +20,36 @@
   box-sizing: border-box;
 }
 
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .hero-slide,
+  .carousel-dot,
+  .floating-card,
+  .coffee-stream {
+    animation: none !important;
+  }
+}
+
 /* Hardware acceleration for smooth animations */
 .hero-slide,
 .floating-card,
 .carousel-dot,
 .btn,
-.card {
+.card,
+.lazy-image {
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
+  will-change: transform;
 }
 
 /* Optimized smooth scrolling */
@@ -36,12 +57,18 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 /* Optimized transitions */
 .transition-smooth {
   transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-/* Lazy image skeleton animation */
+/* Enhanced lazy image skeleton animation */
 .lazy-image-skeleton {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
@@ -57,7 +84,7 @@ html {
   }
 }
 
-/* Enhanced scroll animations */
+/* Enhanced scroll animations with GPU acceleration */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -101,6 +128,19 @@ html {
 
 .fade-in-right {
   animation: fadeInRight 0.8s cubic-bezier(0.25, 0.25, 0.25, 0.75);
+}
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 body {
