@@ -101,7 +101,16 @@ const Offers = () => {
           ) : (
             <div className="grid grid-2 lg:grid-cols-3 gap-8">
               {filteredOffers.map((offer) => (
-                <div key={offer.id} className="card group hover:shadow-xl transition-all duration-300">
+                <div key={offer.id} className="card group hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  {/* Offer Image */}
+                  <div className="w-full h-48 mb-4 overflow-hidden rounded-lg">
+                    <img
+                      src={offer.image}
+                      alt={offer.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  
                   <div className="flex justify-between items-start mb-4">
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-accent-warm rounded-lg text-coffee-dark">
                       {getOfferIcon(offer.type)}
