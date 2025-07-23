@@ -431,8 +431,8 @@ const About = () => {
                 </div>
                 <div className="p-6">
                   <div className="text-center mb-4">
-                    <h4 className="text-xl font-bold text-coffee-dark mb-2">{method.name}</h4>
-                    <div className="flex items-center justify-center gap-2 mb-2">
+                    <h4 className="text-xl font-bold text-coffee-dark mb-3">{method.name}</h4>
+                    <div className="flex items-center justify-center gap-2 mb-3">
                       <span className="px-3 py-1 bg-accent-gold text-white text-xs font-medium rounded-full">
                         {method.technique}
                       </span>
@@ -442,19 +442,35 @@ const About = () => {
                     </div>
                   </div>
                   
-                  <p className="text-text-secondary text-sm mb-4 text-center leading-relaxed">
+                  <p className="text-text-secondary text-sm mb-4 leading-relaxed">
                     {method.description}
                   </p>
                   
+                  {/* Characteristics Section */}
+                  <div className="mb-4">
+                    <h5 className="font-semibold text-coffee-dark text-center mb-2 text-sm">
+                      Key Characteristics
+                    </h5>
+                    <div className="grid grid-cols-2 gap-2">
+                      {method.characteristics.map((characteristic, charIndex) => (
+                        <div key={charIndex} className="flex items-center text-xs text-coffee-medium">
+                          <span className="w-1.5 h-1.5 bg-accent-gold rounded-full mr-2 flex-shrink-0"></span>
+                          {characteristic}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Brewing Specifications */}
                   <div className="bg-gray-50 rounded-lg p-4">
                     <h5 className="font-semibold text-coffee-dark text-center mb-3 text-sm">
                       Brewing Specifications
                     </h5>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-2 gap-2">
                       {method.specs.map((spec, specIndex) => (
                         <div key={specIndex} className="text-center">
                           <div className="text-xs text-coffee-medium mb-1">{spec.label}</div>
-                          <div className="font-bold text-coffee-dark text-sm">{spec.value}</div>
+                          <div className="font-bold text-coffee-dark text-xs">{spec.value}</div>
                         </div>
                       ))}
                     </div>
