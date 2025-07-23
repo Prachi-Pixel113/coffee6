@@ -245,7 +245,7 @@ const Contact = () => {
                       id="message"
                       name="message"
                       required
-                      rows={6}
+                      rows={4}
                       value={formData.message}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-golden focus:border-golden transition-colors resize-none"
