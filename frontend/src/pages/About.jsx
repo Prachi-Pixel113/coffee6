@@ -558,6 +558,7 @@ const About = () => {
                 <div className="absolute -top-1 left-1/2 transform -translate-x-1/2">
                   <div className="steam-line steam-1"></div>
                   <div className="steam-line steam-2"></div>
+                  <div className="steam-line steam-3"></div>
                 </div>
               </div>
               <h3 className="text-2xl font-semibold text-coffee-dark mb-4">
