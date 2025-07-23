@@ -258,8 +258,8 @@ export const imagePerformanceTracker = {
       console.log(`Image loaded in ${loadTime.toFixed(2)}ms:`, src);
       
       // Report to analytics if available
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'image_load', {
+      if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
+        window.gtag('event', 'image_load', {
           event_category: 'performance',
           event_label: src,
           value: Math.round(loadTime)
