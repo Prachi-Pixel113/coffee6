@@ -259,7 +259,7 @@ const Contact = () => {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full bg-golden hover:bg-golden-dark text-coffee-dark font-medium py-4 px-8 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 border-2 border-coffee-dark"
+                      className="w-full bg-golden hover:bg-golden-dark text-coffee-dark font-medium py-4 px-8 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 border border-coffee-dark"
                     >
                       {loading ? (
                         <>
@@ -267,10 +267,7 @@ const Contact = () => {
                           <span>Sending...</span>
                         </>
                       ) : (
-                        <>
-                          <Send className="h-5 w-5" />
-                          <span>Send Message</span>
-                        </>
+                        <span>Send</span>
                       )}
                     </button>
                   </div>
