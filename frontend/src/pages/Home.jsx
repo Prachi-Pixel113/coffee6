@@ -388,40 +388,83 @@ const Home = () => {
         </div>
       </AnimatedSection>
 
-      {/* Testimonials */}
-      <section className="section bg-cream-dark">
+      {/* Testimonials with Scroll Animations */}
+      <AnimatedSection 
+        id="testimonials"
+        className="section bg-cream-dark" 
+        variants={fadeInUpVariants}
+      >
         <div className="container">
-          <div className="text-center mb-16">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Customers Say</h2>
             <p className="text-lg text-text-secondary">
               Don't just take our word for it - hear from our coffee community
             </p>
-          </div>
-          <div className="grid grid-3 gap-8">
-            {testimonialsData.map((testimonial) => (
-              <div key={testimonial.id} className="card">
-                <div className="flex mb-4">
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-3 gap-8"
+            variants={staggerContainerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {testimonialsData.map((testimonial, index) => (
+              <motion.div 
+                key={testimonial.id} 
+                className="card"
+                variants={staggerItemVariants}
+                whileHover={{ 
+                  y: -5,
+                  transition: { type: "spring", stiffness: 300 }
+                }}
+              >
+                <motion.div 
+                  className="flex mb-4"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 + 0.3 }}
+                >
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-accent-gold fill-current" />
+                    <motion.div
+                      key={i}
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 + 0.4 + i * 0.1, type: "spring" }}
+                    >
+                      <Star className="h-5 w-5 text-accent-gold fill-current" />
+                    </motion.div>
                   ))}
-                </div>
+                </motion.div>
                 <p className="text-text-secondary mb-6 italic">"{testimonial.content}"</p>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-accent-warm rounded-full flex items-center justify-center mr-4">
+                  <motion.div 
+                    className="w-12 h-12 bg-accent-warm rounded-full flex items-center justify-center mr-4"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     <span className="text-coffee-dark font-semibold">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </span>
-                  </div>
+                  </motion.div>
                   <div>
                     <h4 className="font-semibold">{testimonial.name}</h4>
                     <p className="text-sm text-text-secondary">{testimonial.role}</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* CTA Section */}
       <section className="section bg-coffee-medium text-white">
