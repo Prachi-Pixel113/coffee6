@@ -57,7 +57,7 @@ const Offers = () => {
       >
         <div className="container text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">Special Offers</h1>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-cream-light drop-shadow-md">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white drop-shadow-md">
             Discover amazing deals and save on your favorite coffee drinks and treats. 
             From happy hour specials to loyalty rewards, we've got something for everyone!
           </p>
