@@ -268,6 +268,9 @@ const Home = () => {
                   src="https://images.unsplash.com/photo-1532713107108-dfb5d8d2fc42?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxiYXJpc3RhfGVufDB8fHx8MTc1MzE2NTExNHww&ixlib=rb-4.1.0&q=85"
                   alt="Professional barista creating latte art - showcasing our commitment to quality and craftsmanship"
                   className="w-full h-[600px] object-cover rounded-2xl shadow-2xl"
+                  priority={false}
+                  quality={85}
+                  sizes={[600, 800, 1200]}
                 />
                 
                 {/* Floating Stats Card */}
