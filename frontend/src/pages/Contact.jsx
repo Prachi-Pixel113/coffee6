@@ -143,7 +143,7 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="bg-white rounded-2xl shadow-xl p-8">
-                <h2 className="text-3xl font-bold text-coffee mb-6">Send us a Message</h2>
+                <h2 className="text-3xl font-bold text-coffee mb-8 text-center">Send us a Message</h2>
                 
                 {/* Status Message */}
                 {status.message && (
