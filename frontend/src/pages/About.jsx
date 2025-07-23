@@ -397,7 +397,7 @@ const About = () => {
                   <LazyImage 
                     src={method.image}
                     alt={method.name}
-                    className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                    className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
                     sizes={[400, 600, 800]}
                     quality={85}
                   />
