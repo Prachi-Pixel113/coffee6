@@ -94,41 +94,65 @@ const About = () => {
   const brewingMethods = useMemo(() => [
     {
       name: "Espresso Perfection",
-      description: "Intense, concentrated coffee extracted under 9 bars of pressure in 25-30 seconds.",
+      description: "The cornerstone of Italian coffee culture. Our master baristas extract the perfect shot using precise pressure and timing to create a rich, velvety crema that locks in the coffee's essential oils and aromatic compounds.",
       image: "https://images.unsplash.com/photo-1572281451006-34e8940bb5f2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxicmV3aW5nJTIwZXNwcmVzc298ZW58MHx8fGJsYWNrX2FuZF93aGl0ZXwxNzUzMTczMzA3fDA&ixlib=rb-4.1.0&q=85",
       technique: "Pressure Extraction",
       flavor: "Rich & Intense",
+      characteristics: [
+        "Golden crema layer",
+        "Concentrated caffeine",
+        "Full-bodied texture",
+        "Complex aromatics"
+      ],
       specs: [
         { label: "Water Temperature", value: "93°C" },
         { label: "Extraction Time", value: "25-30s" },
         { label: "Pressure", value: "9 bars" },
-        { label: "Grind Size", value: "Fine" }
+        { label: "Grind Size", value: "Fine" },
+        { label: "Coffee Dose", value: "18-20g" },
+        { label: "Yield", value: "36-40ml" }
       ]
     },
     {
       name: "Pour Over Artistry",
-      description: "Manual brewing method that allows precise control over water temperature and pouring technique.",
+      description: "A meditative brewing ritual that showcases our barista's skill and precision. Each pour is carefully timed and controlled, allowing the coffee's unique terroir and flavor notes to bloom and develop fully.",
       image: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxicmV3aW5nJTIwcG91ciUyMG92ZXJ8ZW58MHx8fGJsYWNrX2FuZF93aGl0ZXwxNzUzMTczMzA3fDA&ixlib=rb-4.1.0&q=85",
       technique: "Manual Pour Method",
       flavor: "Clean & Bright",
+      characteristics: [
+        "Clarity of flavors",
+        "Bright acidity",
+        "Floral notes",
+        "Clean finish"
+      ],
       specs: [
         { label: "Water Temperature", value: "96°C" },
-        { label: "Brew Time", value: "3-4min" },
-        { label: "Ratio", value: "1:16" },
-        { label: "Grind Size", value: "Medium" }
+        { label: "Total Brew Time", value: "3-4min" },
+        { label: "Coffee to Water", value: "1:16" },
+        { label: "Grind Size", value: "Medium" },
+        { label: "Coffee Dose", value: "25g" },
+        { label: "Water Volume", value: "400ml" }
       ]
     },
     {
       name: "French Press Classic",
-      description: "Full immersion brewing that extracts rich, full-bodied coffee with maximum flavor retention.",
+      description: "The traditional method that extracts maximum body and flavor through full immersion brewing. Our coarse-ground beans steep leisurely, creating a robust cup that captures the coffee's natural oils and sediments for ultimate richness.",
       image: "https://images.unsplash.com/photo-1569387813408-72b66e687493?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxmcmVuY2glMjBwcmVzc3xlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTMyNDg5OTl8MA&ixlib=rb-4.1.0&q=85",
       technique: "Full Immersion",
       flavor: "Bold & Full-Bodied",
+      characteristics: [
+        "Heavy body",
+        "Rich texture",
+        "Natural oils",
+        "Deep flavors"
+      ],
       specs: [
         { label: "Water Temperature", value: "94°C" },
         { label: "Steep Time", value: "4min" },
-        { label: "Ratio", value: "1:15" },
-        { label: "Grind Size", value: "Coarse" }
+        { label: "Coffee to Water", value: "1:15" },
+        { label: "Grind Size", value: "Coarse" },
+        { label: "Coffee Dose", value: "30g" },
+        { label: "Water Volume", value: "450ml" }
       ]
     }
   ], []);
