@@ -1,8 +1,8 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Coffee, Users, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { heroData, testimonialsData } from '../mock';
+import { testimonialsData } from '../mock';
 import { useCart } from '../contexts/CartContext';
 import LazyImage from '../components/LazyImage';
 import HeroCarousel from '../components/HeroCarousel';
@@ -18,50 +18,21 @@ import {
 const Home = () => {
   const { addToCart } = useCart();
   
-  // Hero carousel functionality
-  useEffect(() => {
-    const slides = document.querySelectorAll('.hero-slide');
-    const dots = document.querySelectorAll('.carousel-dot');
-    let currentSlide = 0;
-
-    const showSlide = (index) => {
-      slides.forEach(slide => slide.classList.remove('active'));
-      dots.forEach(dot => dot.classList.remove('active'));
-      
-      if (slides[index]) slides[index].classList.add('active');
-      if (dots[index]) dots[index].classList.add('active');
-    };
-
-    const nextSlide = () => {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    };
-
-    // Auto-advance slides every 5 seconds
-    const slideInterval = setInterval(nextSlide, 5000);
-
-    // Add click handlers for dots
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        currentSlide = index;
-        showSlide(currentSlide);
-        // Reset interval
-        clearInterval(slideInterval);
-        setTimeout(() => {
-          const newInterval = setInterval(nextSlide, 5000);
-          return () => clearInterval(newInterval);
-        }, 5000);
-      });
-    });
-
-    // Cleanup
-    return () => {
-      clearInterval(slideInterval);
-      dots.forEach(dot => {
-        dot.replaceWith(dot.cloneNode(true));
-      });
-    };
-  }, []);
+  // Hero carousel images with optimized data
+  const heroImages = useMemo(() => [
+    {
+      src: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBzaG9wJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzUzMTYzODg4fDA&ixlib=rb-4.1.0&q=85",
+      alt: "Modern coffee shop interior with comfortable seating"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1562235681-74f0c27da49f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxiYXJpc3RhJTIwcG91cmluZyUyMGNvZmZlZXxlbnwwfHx8fDE3NTMxNjM4OTZ8MA&ixlib=rb-4.1.0&q=85",
+      alt: "Professional barista creating perfect coffee"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1675306408031-a9aad9f23308?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8fDE3NTMxNjM5MDZ8MA&ixlib=rb-4.1.0&q=85",
+      alt: "Premium coffee beans ready for brewing"
+    }
+  ], []);
   
   // Featured favorites data with matching IDs from menuData
   const featuredItems = [
