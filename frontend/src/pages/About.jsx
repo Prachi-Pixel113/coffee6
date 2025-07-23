@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Coffee } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { aboutData } from '../mock';
+import LazyImage from '../components/LazyImage';
+import { performanceMonitor } from '../utils/performanceMonitor';
+import { 
+  AnimatedSection, 
+  fadeInUpVariants, 
+  fadeInLeftVariants, 
+  fadeInRightVariants,
+  staggerContainerVariants,
+  staggerItemVariants 
+} from '../hooks/useScrollAnimation';
 
 const About = () => {
-  const team = [
+  // Performance monitoring
+  React.useEffect(() => {
+    performanceMonitor.mark('about-page-start');
+    
+    return () => {
+      performanceMonitor.mark('about-page-end');
+      performanceMonitor.measure('about-page-render', 'about-page-start', 'about-page-end');
+    };
+  }, []);
+
+  const team = useMemo(() => [
     {
       name: 'Maria Santos',
       role: 'Head Barista',
@@ -22,7 +43,86 @@ const About = () => {
       experience: '6 years experience',
       image: 'https://images.unsplash.com/photo-1735787657870-2395d589e733?crop=entropy&cs=srgb&fm=jpg&ixid=M3w2NzUzNjR8MHwxfHNlYXJjaHwyfHxjb2ZmZWUlMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzUzMTczNDczfDA&ixlib=rb-4.1.0&q=85'
     }
-  ];
+  ], []);
+
+  // Memoize coffee journey data to prevent re-renders
+  const coffeeJourney = useMemo(() => [
+    {
+      id: 1,
+      title: "Origin & Sustainable Sourcing",
+      description: "Our journey begins in the misty highlands of Ethiopia, Colombia, and Guatemala, where we partner directly with small-scale farmers practicing sustainable agriculture.",
+      images: [
+        "https://images.unsplash.com/photo-1722962883780-8806c3ab546b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBmYXJtfGVufDB8fHx8MTc1MzIwNTIwNXww&ixlib=rb-4.1.0&q=85",
+        "https://images.unsplash.com/photo-1567726843492-df0484bb0b05?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwzfHxjb2ZmZWUlMjBmYXJtfGVufDB8fHx8MTc1MzIwNTIwNXww&ixlib=rb-4.1.0&q=85"
+      ],
+      details: [
+        "Altitude: 1,200-2,000 meters above sea level",
+        "Fair Trade certified with living wage guarantee",
+        "Organic farming methods with zero pesticides",
+        "Direct partnerships with 15+ family farms"
+      ]
+    },
+    {
+      id: 2,
+      title: "Artisanal Roasting Mastery",
+      description: "Master Roaster James Wilson applies 12 years of expertise to unlock each bean's unique flavor profile using precise temperature control and timing.",
+      images: [
+        "https://images.unsplash.com/photo-1607681034540-2c46cc71896d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjByb2FzdGluZ3xlbnwwfHx8fDE3NTMyMDUyMTV8MA&ixlib=rb-4.1.0&q=85",
+        "https://images.unsplash.com/photo-1611410255266-a1eaa3768021?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxjb2ZmZWUlMjByb2FzdGluZ3xlbnwwfHx8fDE3NTMyMDUyMTV8MA&ixlib=rb-4.1.0&q=85"
+      ],
+      stats: [
+        { label: "Peak Roasting Temperature", value: "205°C" },
+        { label: "Roasting Duration", value: "12-15min" }
+      ],
+      profiles: ["Light Roast - Bright & Fruity", "Medium Roast - Balanced & Sweet", "Dark Roast - Bold & Rich"]
+    },
+    {
+      id: 3,
+      title: "Precision Grinding Technology",
+      description: "Commercial-grade burr grinders achieve consistent particle size distribution crucial for optimal extraction.",
+      images: [
+        "https://images.unsplash.com/photo-1588394952119-45f99780af73?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxncmluZGluZyUyMGNvZmZlZXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTMxNzMyOTd8MA&ixlib=rb-4.1.0&q=85"
+      ],
+      grinds: [
+        { type: "Espresso (Fine)", dots: 3 },
+        { type: "Pour Over (Medium)", dots: 2 },
+        { type: "French Press (Coarse)", dots: 1 }
+      ]
+    }
+  ], []);
+
+  const brewingMethods = useMemo(() => [
+    {
+      name: "Espresso Perfection",
+      description: "Intense, concentrated coffee extracted under 9 bars of pressure in 25-30 seconds.",
+      image: "https://images.unsplash.com/photo-1572281451006-34e8940bb5f2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxicmV3aW5nJTIwZXNwcmVzc298ZW58MHx8fGJsYWNrX2FuZF93aGl0ZXwxNzUzMTczMzA3fDA&ixlib=rb-4.1.0&q=85",
+      specs: [
+        { label: "Water Temperature", value: "93°C" },
+        { label: "Extraction Time", value: "25-30s" },
+        { label: "Pressure", value: "9 bars" }
+      ]
+    },
+    {
+      name: "Pour Over Artistry",
+      description: "Manual brewing method that allows precise control over water temperature and pouring technique.",
+      image: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxicmV3aW5nJTIwcG91ciUyMG92ZXJ8ZW58MHx8fGJsYWNrX2FuZF93aGl0ZXwxNzUzMTczMzA3fDA&ixlib=rb-4.1.0&q=85",
+      specs: [
+        { label: "Water Temperature", value: "96°C" },
+        { label: "Brew Time", value: "3-4min" },
+        { label: "Ratio", value: "1:16" }
+      ]
+    },
+    {
+      name: "French Press Classic",
+      description: "Full immersion brewing that extracts rich, full-bodied coffee with maximum flavor retention.",
+      image: "https://images.unsplash.com/photo-1587049633312-d628ae50a8dd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxicmV3aW5nJTIwZnJlbmNoJTIwcHJlc3N8ZW58MHx8fGJsYWNrX2FuZF93aGl0ZXwxNzUzMTczMzA3fDA&ixlib=rb-4.1.0&q=85",
+      specs: [
+        { label: "Water Temperature", value: "94°C" },
+        { label: "Steep Time", value: "4min" },
+        { label: "Ratio", value: "1:15" }
+      ]
+    }
+  ], []);
 
   return (
     <div className="about-page">
