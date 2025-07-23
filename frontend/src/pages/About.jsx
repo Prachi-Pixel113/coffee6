@@ -413,7 +413,7 @@ const About = () => {
             {brewingMethods.map((method, index) => (
               <motion.div 
                 key={index} 
-                className="brewing-method-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100"
+                className="brewing-method-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 h-full flex flex-col"
                 variants={staggerItemVariants}
                 whileHover={{ 
                   y: -8,
