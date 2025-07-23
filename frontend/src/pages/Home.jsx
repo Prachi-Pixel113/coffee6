@@ -169,12 +169,22 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Enhanced Features Section */}
-      <section className="section bg-white">
+      {/* Enhanced Features Section with Scroll Animations */}
+      <AnimatedSection 
+        id="features"
+        className="section bg-white"
+        variants={fadeInUpVariants}
+      >
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div 
+            className="grid lg:grid-cols-2 gap-16 items-center"
+            variants={staggerContainerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             {/* Left Side - Content */}
-            <div className="space-y-8">
+            <motion.div className="space-y-8" variants={fadeInLeftVariants}>
               <div className="text-center lg:text-left">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Brew Haven?</h2>
                 <p className="text-lg text-text-secondary max-w-2xl">
@@ -182,23 +192,40 @@ const Home = () => {
                 </p>
               </div>
               
-              {/* Feature Points */}
-              <div className="space-y-6">
+              {/* Feature Points with Stagger Animation */}
+              <motion.div 
+                className="space-y-6"
+                variants={staggerContainerVariants}
+              >
                 {features.map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-4 group">
-                    <div className="flex-shrink-0 w-14 h-14 bg-accent-warm rounded-full flex items-center justify-center text-coffee-dark transition-all duration-300">
+                  <motion.div 
+                    key={index} 
+                    className="flex items-start space-x-4 group"
+                    variants={staggerItemVariants}
+                    whileHover={{ x: 8 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <motion.div 
+                      className="flex-shrink-0 w-14 h-14 bg-accent-warm rounded-full flex items-center justify-center text-coffee-dark transition-all duration-300"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                    >
                       {feature.icon}
-                    </div>
+                    </motion.div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold mb-2 text-coffee-dark">{feature.title}</h3>
                       <p className="text-text-secondary leading-relaxed">{feature.description}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
               
               {/* Additional Benefits */}
-              <div className="bg-cream-dark rounded-2xl p-6 mt-8">
+              <motion.div 
+                className="bg-cream-dark rounded-2xl p-6 mt-8"
+                variants={staggerItemVariants}
+                whileHover={{ y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <div className="flex items-center space-x-3 mb-4">
                   <Award className="h-6 w-6 text-accent-gold" />
                   <h4 className="text-lg font-semibold text-coffee-dark">Our Promise</h4>
@@ -217,20 +244,30 @@ const Home = () => {
                     <span>Expertly trained baristas committed to perfection</span>
                   </li>
                 </ul>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
             
-            {/* Right Side - Image */}
-            <div className="relative">
+            {/* Right Side - Image with Lazy Loading */}
+            <motion.div 
+              className="relative"
+              variants={fadeInRightVariants}
+            >
               <div className="relative z-10">
-                <img 
+                <LazyImage 
                   src="https://images.unsplash.com/photo-1532713107108-dfb5d8d2fc42?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxiYXJpc3RhfGVufDB8fHx8MTc1MzE2NTExNHww&ixlib=rb-4.1.0&q=85"
                   alt="Professional barista creating latte art - showcasing our commitment to quality and craftsmanship"
                   className="w-full h-[600px] object-cover rounded-2xl shadow-2xl"
                 />
                 
                 {/* Floating Stats Card */}
-                <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-2xl p-6 border border-gray-100">
+                <motion.div 
+                  className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-2xl p-6 border border-gray-100"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5, duration: 0.6 }}
+                  whileHover={{ scale: 1.05 }}
+                >
                   <div className="flex items-center space-x-4">
                     <div className="text-center">
                       <div className="text-2xl font-bold text-coffee-medium">10+</div>
@@ -242,16 +279,39 @@ const Home = () => {
                       <div className="text-sm text-text-secondary">Happy Customers</div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
               
               {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent-warm rounded-full opacity-20"></div>
-              <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-coffee-light rounded-full opacity-10"></div>
-            </div>
-          </div>
+              <motion.div 
+                className="absolute -top-4 -right-4 w-24 h-24 bg-accent-warm rounded-full opacity-20"
+                animate={{ 
+                  y: [0, -10, 0],
+                  rotate: [0, 5, 0] 
+                }}
+                transition={{ 
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              ></motion.div>
+              <motion.div 
+                className="absolute -bottom-8 -right-8 w-32 h-32 bg-coffee-light rounded-full opacity-10"
+                animate={{ 
+                  y: [0, 10, 0],
+                  rotate: [0, -5, 0] 
+                }}
+                transition={{ 
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1
+                }}
+              ></motion.div>
+            </motion.div>
+          </motion.div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Quick Menu Preview */}
       <section className="section bg-white">
