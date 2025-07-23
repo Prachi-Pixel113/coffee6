@@ -45,14 +45,22 @@ const Offers = () => {
   return (
     <div className="offers-page">
       {/* Hero Section */}
-      <section className="section bg-gradient-to-r from-accent-gold to-accent-warm text-coffee-dark">
-        <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Special Offers</h1>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+      <section 
+        className="section bg-gradient-to-r from-accent-gold to-accent-warm text-coffee-dark relative overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(240, 173, 78, 0.8), rgba(244, 189, 117, 0.8)), url('https://images.unsplash.com/photo-1453614512568-c4024d13c247?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBzaG9wfGVufDB8fHx8MTc1MzI1MzI1OHww&ixlib=rb-4.1.0&q=85')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="container text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">Special Offers</h1>
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white drop-shadow-md">
             Discover amazing deals and save on your favorite coffee drinks and treats. 
             From happy hour specials to loyalty rewards, we've got something for everyone!
           </p>
-          <div className="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-full text-coffee-dark font-semibold">
+          <div className="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-full text-coffee-dark font-semibold shadow-xl">
             <Gift className="h-5 w-5" />
             <span>Limited Time Offers Available</span>
           </div>
