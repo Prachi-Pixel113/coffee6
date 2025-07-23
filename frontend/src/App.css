@@ -107,17 +107,17 @@ html {
 }
 
 .steam-1 {
-  left: -4px;
+  left: -8px;
   animation-delay: 0s;
 }
 
 .steam-2 {
-  left: 0px;
+  left: -4px;
   animation-delay: 0.7s;
 }
 
 .steam-3 {
-  left: 4px;
+  left: 0px;
   animation-delay: 1.4s;
 }
 
