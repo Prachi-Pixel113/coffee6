@@ -484,7 +484,7 @@ const About = () => {
 
       {/* Quality Promise Section */}
       <AnimatedSection 
-        className="section bg-gradient-to-r from-coffee-medium to-coffee-dark text-white"
+        className="section bg-gradient-to-r from-cream-light to-cream-medium text-coffee-dark"
         variants={fadeInUpVariants}
       >
         <div className="container text-center">
@@ -494,8 +494,8 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Quality Promise</h2>
-            <p className="text-xl mb-8 text-cream-medium max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-coffee-dark">Our Quality Promise</h2>
+            <p className="text-xl mb-8 text-coffee-medium max-w-3xl mx-auto">
               Every cup represents our commitment to excellence, sustainability, and the perfect coffee experience.
             </p>
             
@@ -514,12 +514,12 @@ const About = () => {
               ].map((stat, index) => (
                 <motion.div 
                   key={index} 
-                  className="text-center"
+                  className="text-center bg-white rounded-2xl p-6 shadow-lg"
                   variants={staggerItemVariants}
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className="text-4xl font-bold text-accent-gold mb-2">{stat.value}</div>
-                  <div className="text-cream-medium">{stat.label}</div>
+                  <div className="text-coffee-medium font-medium">{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
