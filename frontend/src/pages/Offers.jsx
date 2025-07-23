@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Gift, Percent, GraduationCap, Users } from 'lucide-react';
 import { offersData } from '../mock';
+import LazyImage from '../components/LazyImage';
 
 const Offers = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
