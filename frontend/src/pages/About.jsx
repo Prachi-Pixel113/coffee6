@@ -366,7 +366,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-coffee-medium to-coffee-dark rounded-full text-white font-bold text-xl shadow-lg mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-coffee-medium to-coffee-dark rounded-full text-white font-bold text-2xl shadow-2xl border-4 border-white mb-6">
               04
             </div>
             <h3 className="text-3xl font-bold text-coffee-dark mb-4">Master Brewing Techniques</h3>
