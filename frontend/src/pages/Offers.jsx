@@ -61,10 +61,6 @@ const Offers = () => {
             Discover amazing deals and save on your favorite coffee drinks and treats. 
             From happy hour specials to loyalty rewards, we've got something for everyone!
           </p>
-          <div className="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-full text-coffee-dark font-semibold shadow-xl">
-            <Gift className="h-5 w-5" />
-            <span>Limited Time Offers Available</span>
-          </div>
         </div>
       </section>
 
