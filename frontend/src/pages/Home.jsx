@@ -6,6 +6,7 @@ import { testimonialsData } from '../mock';
 import { useCart } from '../contexts/CartContext';
 import LazyImage from '../components/LazyImage';
 import HeroCarousel from '../components/HeroCarousel';
+import { performanceMonitor } from '../utils/performanceMonitor';
 import { 
   AnimatedSection, 
   fadeInUpVariants, 
