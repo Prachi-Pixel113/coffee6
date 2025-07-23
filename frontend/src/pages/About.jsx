@@ -432,7 +432,7 @@ const About = () => {
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="text-center mb-4">
                     <h4 className="text-xl font-bold text-coffee-dark mb-3">{method.name}</h4>
-                    <div className="flex items-center justify-center gap-2 mb-3">
+                    <div className="flex items-center justify-center gap-2 mb-4">
                       <span className="px-3 py-1 bg-accent-gold text-white text-xs font-medium rounded-full">
                         {method.technique}
                       </span>
@@ -442,20 +442,22 @@ const About = () => {
                     </div>
                   </div>
                   
-                  <p className="text-text-secondary text-sm mb-4 leading-relaxed">
-                    {method.description}
-                  </p>
+                  <div className="text-center mb-4">
+                    <p className="text-text-secondary text-sm leading-relaxed">
+                      {method.description}
+                    </p>
+                  </div>
                   
                   {/* Characteristics Section */}
-                  <div className="mb-4">
-                    <h5 className="font-semibold text-coffee-dark text-center mb-3 text-sm">
+                  <div className="mb-4 text-center">
+                    <h5 className="font-semibold text-coffee-dark mb-3 text-sm">
                       Key Characteristics
                     </h5>
                     <div className="space-y-2">
                       {method.characteristics.map((characteristic, charIndex) => (
                         <div key={charIndex} className="flex items-center justify-center text-xs text-coffee-medium">
                           <span className="w-1.5 h-1.5 bg-accent-gold rounded-full mr-2 flex-shrink-0"></span>
-                          <span className="text-center">{characteristic}</span>
+                          <span>{characteristic}</span>
                         </div>
                       ))}
                     </div>
