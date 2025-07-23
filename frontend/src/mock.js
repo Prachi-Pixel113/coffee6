@@ -33,38 +33,38 @@ export const offersData = [
   {
     id: 1,
     title: "Happy Hour Special",
-    description: "50% off all espresso drinks every weekday from 2-4 PM",
+    description: "50% off all espresso drinks every weekday from 2-4 PM. Perfect time to treat yourself to premium coffee at an amazing price!",
     validUntil: "2024-12-31",
     discount: "50%",
     type: "time-based",
-    image: "/api/placeholder/400/300"
+    image: "https://images.unsplash.com/photo-1612509590595-785e974ed690?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBlc3ByZXNzb3xlbnwwfHx8fDE3NTMyNTMyODN8MA&ixlib=rb-4.1.0&q=85"
   },
   {
     id: 2,
     title: "Buy 10, Get 1 Free",
-    description: "Loyalty card program for all hot beverages",
+    description: "Loyalty card program for all hot beverages. Build lasting relationships with us while enjoying your favorite coffee regularly.",
     validUntil: "ongoing",
     discount: "Free",
     type: "loyalty",
-    image: "/api/placeholder/400/300"
+    image: "https://images.unsplash.com/photo-1524686788093-aa1f9c0f7c4f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxjb2ZmZWUlMjBlc3ByZXNzb3xlbnwwfHx8fDE3NTMyNTMyODN8MA&ixlib=rb-4.1.0&q=85"
   },
   {
     id: 3,
     title: "Weekend Brunch Deal",
-    description: "Coffee + pastry combo for just $8.99 on weekends",
+    description: "Coffee + pastry combo for just $8.99 on weekends. The perfect combination to start your relaxing weekend morning right.",
     validUntil: "2024-12-31",
     discount: "$8.99",
     type: "combo",
-    image: "/api/placeholder/400/300"
+    image: "https://images.unsplash.com/photo-1622744527656-8ca8ae3ac038?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwyfHxjb2ZmZWUlMjBicnVuY2h8ZW58MHx8fHwxNzUzMjUzMjkwfDA&ixlib=rb-4.1.0&q=85"
   },
   {
     id: 4,
     title: "Student Discount",
-    description: "20% off with valid student ID",
+    description: "20% off with valid student ID. Supporting students with quality coffee to fuel their studies and academic success.",
     validUntil: "ongoing",
     discount: "20%",
     type: "student",
-    image: "/api/placeholder/400/300"
+    image: "https://images.unsplash.com/photo-1655248762702-321fa572a2ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBicnVuY2h8ZW58MHx8fHwxNzUzMjUzMjkwfDA&ixlib=rb-4.1.0&q=85"
   }
 ];
 
