@@ -448,14 +448,14 @@ const About = () => {
                   
                   {/* Characteristics Section */}
                   <div className="mb-4">
-                    <h5 className="font-semibold text-coffee-dark text-center mb-2 text-sm">
+                    <h5 className="font-semibold text-coffee-dark text-center mb-3 text-sm">
                       Key Characteristics
                     </h5>
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="space-y-2">
                       {method.characteristics.map((characteristic, charIndex) => (
-                        <div key={charIndex} className="flex items-center text-xs text-coffee-medium">
+                        <div key={charIndex} className="flex items-center justify-center text-xs text-coffee-medium">
                           <span className="w-1.5 h-1.5 bg-accent-gold rounded-full mr-2 flex-shrink-0"></span>
-                          {characteristic}
+                          <span className="text-center">{characteristic}</span>
                         </div>
                       ))}
                     </div>
