@@ -78,42 +78,37 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      {/* Hero Section - Enhanced Visual Design */}
-      <section className="relative text-white overflow-hidden hero-enhanced min-h-screen">
-        {/* Professional Hero Image Carousel */}
-        <div className="hero-carousel">
-          <div className="hero-slide active" style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1521017432531-fbd92d768814?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBzaG9wJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzUzMTYzODg4fDA&ixlib=rb-4.1.0&q=85")'
-          }}></div>
-          <div className="hero-slide" style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1562235681-74f0c27da49f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxiYXJpc3RhJTIwcG91cmluZyUyMGNvZmZlZXxlbnwwfHx8fDE3NTMxNjM4OTZ8MA&ixlib=rb-4.1.0&q=85")'
-          }}></div>
-          <div className="hero-slide" style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1675306408031-a9aad9f23308?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBiZWFuc3xlbnwwfHx8fDE3NTMxNjM5MDZ8MA&ixlib=rb-4.1.0&q=85")'
-          }}></div>
-        </div>
-
-        {/* Enhanced Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-coffee-dark/60 to-coffee-medium/40"></div>
+      {/* Hero Section - Enhanced with Optimized Carousel */}
+      <section id="hero" className="relative text-white overflow-hidden hero-enhanced min-h-screen group">
+        {/* Optimized Hero Carousel */}
+        <HeroCarousel images={heroImages} autoPlayInterval={6000} />
         
         {/* Subtle Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="coffee-pattern"></div>
         </div>
 
         {/* Main Hero Content */}
-        <div className="relative container h-full">
+        <div className="relative container h-full z-10">
           <div className="flex items-center justify-between min-h-screen py-20">
             {/* Left Content */}
-            <div className="max-w-3xl space-y-8 fade-in-up">
+            <motion.div 
+              className="max-w-3xl space-y-8"
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainerVariants}
+            >
               {/* Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30">
+              <motion.div 
+                className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30"
+                variants={staggerItemVariants}
+              >
                 <Award className="h-4 w-4 text-yellow-300 mr-2" />
                 <span className="text-yellow-200 text-sm font-medium">Premium Coffee Experience</span>
-              </div>
+              </motion.div>
               
               {/* Enhanced Typography */}
-              <div className="space-y-6">
+              <motion.div className="space-y-6" variants={staggerItemVariants}>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
                   <span className="block text-4xl md:text-5xl lg:text-6xl text-white/90 font-semibold mb-2">Welcome to</span>
                   <span className="text-gradient-hero-light">Brew Haven</span>
@@ -126,10 +121,13 @@ const Home = () => {
                 <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl">
                   Discover the perfect blend of premium coffee beans, artisanal brewing methods, and cozy atmosphere. Your journey to coffee perfection starts here.
                 </p>
-              </div>
+              </motion.div>
 
               {/* Enhanced CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 pt-6"
+                variants={staggerItemVariants}
+              >
                 <Link to="/coffee-shop" className="btn btn-primary-hero group relative overflow-hidden">
                   <span className="relative z-10 flex items-center justify-center">
                     <Coffee className="mr-3 h-5 w-5" />
@@ -145,11 +143,16 @@ const Home = () => {
                   </span>
                   <div className="absolute inset-0 bg-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Right Visual Elements */}
-            <div className="hidden lg:block absolute right-20 top-1/2 transform -translate-y-1/2">
+            <motion.div 
+              className="hidden lg:block absolute right-20 top-1/2 transform -translate-y-1/2"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+            >
               <div className="floating-card bg-white/15 backdrop-blur-lg p-6 rounded-2xl border border-white/30">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
@@ -161,16 +164,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Carousel Navigation */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="flex space-x-2">
-            <button className="carousel-dot active" data-slide="0"></button>
-            <button className="carousel-dot" data-slide="1"></button>
-            <button className="carousel-dot" data-slide="2"></button>
+            </motion.div>
           </div>
         </div>
       </section>
