@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "improve contact us functionality"
+user_problem_statement: "frontend optimization and smooth scrolling"
 
 frontend:
   - task: "Professional Contact Us page with contact form"
