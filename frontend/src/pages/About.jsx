@@ -201,13 +201,13 @@ const About = () => {
                   transition: { type: "spring", stiffness: 300 }
                 }}
               >
-                <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
+                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
                   <LazyImage 
                     src={member.image}
                     alt={`${member.name} - ${member.role}`}
                     className="w-full h-full object-cover"
                     priority={index === 0}
-                    sizes={[150, 200, 300]}
+                    sizes={[200, 250, 300]}
                   />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
