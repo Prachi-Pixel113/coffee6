@@ -158,15 +158,15 @@ const Offers = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-coffee-light bg-opacity-50 rounded-lg p-6">
                 <div className="text-2xl font-bold text-accent-gold mb-2">1 Point</div>
-                <div className="text-cream-medium">Per $1 Spent</div>
+                <div className="text-white">Per $1 Spent</div>
               </div>
               <div className="bg-coffee-light bg-opacity-50 rounded-lg p-6">
                 <div className="text-2xl font-bold text-accent-gold mb-2">100 Points</div>
-                <div className="text-cream-medium">Free Drink</div>
+                <div className="text-white">Free Drink</div>
               </div>
               <div className="bg-coffee-light bg-opacity-50 rounded-lg p-6">
                 <div className="text-2xl font-bold text-accent-gold mb-2">Birthday</div>
-                <div className="text-cream-medium">Free Treat</div>
+                <div className="text-white">Free Treat</div>
               </div>
             </div>
             <button className="btn btn-accent">
