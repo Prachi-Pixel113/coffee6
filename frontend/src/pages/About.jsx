@@ -552,7 +552,15 @@ const About = () => {
               </div>
             </div>
             <div className="bg-accent-warm rounded-2xl p-8 lg:p-12 text-center">
-              <Coffee className="h-20 w-20 text-coffee-dark mx-auto mb-6" />
+              <div className="relative mx-auto mb-6 w-20 h-20">
+                <Coffee className="h-20 w-20 text-coffee-dark" />
+                {/* Steam Animation */}
+                <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
+                  <div className="steam-line steam-1"></div>
+                  <div className="steam-line steam-2"></div>
+                  <div className="steam-line steam-3"></div>
+                </div>
+              </div>
               <h3 className="text-2xl font-semibold text-coffee-dark mb-4">
                 From Bean to Cup
               </h3>
