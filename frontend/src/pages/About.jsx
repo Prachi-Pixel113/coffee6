@@ -404,7 +404,7 @@ const About = () => {
           </motion.div>
           
           <motion.div 
-            className="grid md:grid-cols-3 gap-8"
+            className="grid md:grid-cols-3 gap-8 items-stretch"
             variants={staggerContainerVariants}
             initial="hidden"
             whileInView="visible"
