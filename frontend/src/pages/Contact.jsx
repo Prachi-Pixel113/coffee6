@@ -255,11 +255,11 @@ const Contact = () => {
                   </div>
 
                   {/* Submit Button */}
-                  <div>
+                  <div className="text-center">
                     <button
                       type="submit"
                       disabled={loading}
-                      className="bg-golden hover:bg-golden-dark text-coffee-dark font-medium py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 border border-coffee-dark"
+                      className="bg-golden hover:bg-golden-dark active:bg-coffee-dark text-coffee-dark hover:text-coffee-dark active:text-white font-medium py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 border border-coffee-dark"
                     >
                       {loading ? (
                         <>
