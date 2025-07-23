@@ -252,7 +252,7 @@ const About = () => {
                 <div className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                   <div className={`${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
                     <div className="relative">
-                      <div className={`step-number absolute -top-4 ${index % 2 === 1 ? '-right-4' : '-left-4'} w-16 h-16 bg-gradient-to-br from-accent-gold to-yellow-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg z-10`}>
+                      <div className={`step-number absolute -top-6 ${index % 2 === 1 ? '-right-6' : '-left-6'} w-20 h-20 bg-gradient-to-br from-accent-gold to-yellow-600 rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-2xl border-4 border-white z-10`}>
                         {String(index + 1).padStart(2, '0')}
                       </div>
                       {step.images.length > 1 ? (
