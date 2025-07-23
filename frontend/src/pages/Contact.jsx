@@ -255,15 +255,15 @@ const Contact = () => {
                   </div>
 
                   {/* Submit Button */}
-                  <div className="text-center">
+                  <div className="flex justify-center">
                     <button
                       type="submit"
                       disabled={loading}
-                      className="bg-golden hover:bg-golden-dark active:bg-coffee-dark text-coffee-dark hover:text-coffee-dark active:text-white font-medium py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 border border-coffee-dark"
+                      className="bg-coffee-dark hover:bg-coffee-medium text-white font-medium py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 border border-coffee-dark"
                     >
                       {loading ? (
                         <>
-                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-coffee-dark"></div>
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
                           <span>Sending...</span>
                         </>
                       ) : (
