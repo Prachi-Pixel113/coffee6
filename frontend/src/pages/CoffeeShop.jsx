@@ -91,14 +91,14 @@ const CoffeeShop = () => {
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => updateQuantity(item.id, -1)}
-                          className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300"
+                          className="w-6 h-6 rounded-full bg-gray-200 border border-gray-300 flex items-center justify-center hover:bg-gray-300 hover:border-gray-400"
                         >
                           <Minus className="h-3 w-3" />
                         </button>
                         <span>{item.quantity}</span>
                         <button
                           onClick={() => updateQuantity(item.id, 1)}
-                          className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300"
+                          className="w-6 h-6 rounded-full bg-gray-200 border border-gray-300 flex items-center justify-center hover:bg-gray-300 hover:border-gray-400"
                         >
                           <Plus className="h-3 w-3" />
                         </button>
