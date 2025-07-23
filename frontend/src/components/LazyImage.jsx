@@ -141,5 +141,3 @@ const LazyImage = ({
 };
 
 export default LazyImage;
-
-export default LazyImage;
